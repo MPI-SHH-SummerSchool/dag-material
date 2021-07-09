@@ -1,7 +1,6 @@
 ---
-title: 'Introduction to NGS DNA Sequencing and Processing'
-author: James Fellows Yates
-date: 2021-08-17
+title: 'Intro to NGS processing'
+author: James A. Fellows Yates
 autosize: true
 output: 
   revealjs::revealjs_presentation:
@@ -10,10 +9,16 @@ output:
       slideNumber: true
       progress: true
       controls: false
+      
 css: slides.css
 ---
 
+# Intro to NGS processing
+
 # Who am I?
+
+# Who am I?
+
 
 - Education
   - B.Sc. Bioarchaeology (University of York, UK)
@@ -62,5 +67,9 @@ Market leader: <img src="https://assets.illumina.com/content/dam/illumina-common
 
 
 # How does it work?
+
+```bash
+cat 1.fastq 2.fastq
+```
 
 
