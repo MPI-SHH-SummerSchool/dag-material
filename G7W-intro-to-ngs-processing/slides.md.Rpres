@@ -1,0 +1,40 @@
+Introduction to NGS DNA Sequencing and Processing 
+========================================================
+author: James Fellows Yates
+date: 2021-08-17
+autosize: true
+css: slides.css
+
+Today we will 
+========================================================
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+What is Sequencing?
+========================================================
+
+'Reading' of the nucleotides of a DNA molecule,
+
+i.e. biomolecules to text
+
+What is NGS?
+========================================================
+
+NGS: Next Generation Sequencing
+
+> Not really 'next' anymore, consider it more 'second' generation (re: Nanopore)
+
+Why do we care?
+========================================================
+
+MASSIVELY multiplexed! 
+
+Sequence millions and millions and millions and millions of DNA reads at once!
+
+OK cool, but so what...?
+========================================================
+
+Big data == complex

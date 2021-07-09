@@ -1,0 +1,85 @@
+/* @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap&subset=latin-ext); 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+*/
+
+.reveal data-background{
+  color: #262626
+}
+
+.reveal header {
+  position: absolute;
+  top: 50px; 
+  left: 100px; 
+  z-index:500; 
+  font-size:100px;
+  background-color: rgba(0,0,0,0.5)
+}
+
+
+.reveal body p { 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.reveal h1 {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: 400;
+    color: #00816F;
+}
+
+.reveal h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #888888;
+}
+
+.reveal h3 {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    color: #888888;
+}
+
+/* https://github.com/gnab/remark/issues/305#issuecomment-403309989 */
+.reveal pre code {
+    border-left: 0.3em solid #ccc;
+    padding: 0 15px;
+    font-style: italic;
+    color: #777;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 18px;
+    background-color: #DEDEDE;
+}
+
+.reveal code {
+    color: #777;
+    background-color: #DEDEDE;
+}
+
+.reveal .progress {
+  background-color: #C0C0C0;
+  height: 0.5%;
+}
+
+.reveal .progress span {
+  background: #00816F;
+}
+
+
+.reveal section data-background {
+  color: "#00816F"
+}
+
+div.my-header {
+  background-color: #00816F;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.reveal section img { background:none; border:none; box-shadow:none; }
