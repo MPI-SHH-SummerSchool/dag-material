@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
-
-.reveal body p { 
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 300;
-    color: #000000;
-}
-
-.slide-background:first-child {
-  background-image: url(assets/img/IMPRS_SHH_Summerschool_MasterBG.jpg);
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 .reveal .slide-background {
     display: none;
@@ -24,58 +14,83 @@
     background-size: cover;
     -webkit-transition: all 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
     transition: all 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
-    background-image: url(assets/img/IMPRS_SHH_Summerschool_MasterBG_Normal.jpg);
+    background-image: url(assets/img/IMPRS_SHH_SummerSchool_2021-NormalSlide.jpg);
     background-size: contain;
-}
-
-.reveal  {
-  data-background: url("assets/img/IMPRS_SHH_Summerschool_MasterBG_Normal.jpg");
 }
 
 .reveal h1 {
     font-family: 'Fira Sans', sans-serif;
-    font-weight: 600;
-    color: #22817f;
+    font-weight: 400;
+    font-size: 33;
+    color: #007d7a;
+    text-align: left;
 }
 
 .reveal h2 {
     font-family: 'Fira Sans', sans-serif;
-    font-weight: 400;
-    color: #22817f;
+    font-weight: 300;
+    font-size: 26
+    color: #a4ddd4;
+    text-align: left;
 }
 
 .reveal h3 {
     font-family: 'Fira Sans', sans-serif;
     font-style: italic;
-    font-weight: 400;
-    color: #22817f;
+    font-weight: 300;
+    font-size: 21;
+    color: #a4ddd4;
+    text-align: left;
+}
+
+.reveal body p { 
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 21;
+    color: #1d1d1b;
+}
+
+.reveal a {
+    color: #a4ddd4;
+}
+
+.reveal a:hover {
+    color: #007d7a;
+}
+
+.reveal blockquote{
+    border-left: 0.3em solid #ccc;
+    padding: 0 15px;
+    color: #ccc;
 }
 
 /* https://github.com/gnab/remark/issues/305#issuecomment-403309989 */
 .reveal pre code {
-    font-family: 'Fira Mono';
+    font-family: 'Fira Code';
     border-left: 0.3em solid #ccc;
     padding: 0 15px;
     font-style: italic;
-    color: #FFFFFF;
+    color: #1d1d1b;
     quotes: "\201C""\201D""\2018""\2019";
     font-size: 18px;
-    background-color: #9D8189;
+    background-color: #d8d8d8;
 }
 
 .reveal code {
-    font-family: 'Fira Mono';
-    color: #FFFFFF;
-    background-color: #9D8189;
+    font-family: 'Fira Code';
+    font-style: italic;
+    quotes: "\201C""\201D""\2018""\2019";
+    color: #1d1d1b;
+    background-color: #d8d8d8;
 }
 
 .reveal .progress {
-  background-color: #C0C0C0;
+  background-color: #d8d8d8;
   height: 0.5%;
 }
 
 .reveal .progress span {
-  background: #22817f;
+  background: #007d7a;
 }
 
 .reveal section img { background:none; border:none; box-shadow:none; }
