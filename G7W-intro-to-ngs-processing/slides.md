@@ -50,7 +50,7 @@ css: slides.css
 
 # What is DNA?
 
-<a title="Pradana Aumars, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="256" alt="Structure ADN" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Structure_ADN.png"></a>
+<a title="Pradana Aumars, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="512" alt="Structure ADN" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Structure_ADN.png"></a>
 
 # The rules
 
@@ -72,10 +72,11 @@ css: slides.css
   - Make new strand: find a `C`, get new `G` (etc)
 
 <p style="align:center">
-  <a title="I, Madprime, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg"><img width="256" alt="DNA replication split" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DNA_replication_split.svg/256px-DNA_replication_split.svg.png"></a>
+  <a title="I, Madprime, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg"><img width="200" alt="DNA replication split" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DNA_replication_split.svg/256px-DNA_replication_split.svg.png"></a>
 </p>
   
 # How do we get DNA?
+
 
 <a title="CNX OpenStax, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg"><img width="512" alt="Figure 17 01 02" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Figure_17_01_02.jpg"></a>
 
@@ -101,10 +102,9 @@ to
 
 <a title="Estevezj, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg"><img width="512" alt="Sanger-sequencing" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sanger-sequencing.svg/512px-Sanger-sequencing.svg.png"></a>
 
-- Sanger sequencing
-  - Separate strands, add primer (starting point)
-  - Add random mix of nucleotides, but some with special 'terminators'
-  - Pass through size-filtering, read order of terminators
+- Separate strands, add primer (starting point)
+- Add mix of nucleotides, some with special 'terminators'
+- Pass through size-filtering, read order of terminators
 
 # Pros and cons of Sanger Sequencing
 
@@ -113,24 +113,91 @@ to
   - Longer reads
 - Cons
   - Resource heavy: lot of input DNA
-  - Slow: one fragment at a time
+  - Slow: one. fragment. at. a. time.
 
 # What is NGS?
 
 - NGS: Next Generation Sequencing
   - MASSIVELY multiplexed! 
-  - Sequence millions and millions and millions and millions of DNA reads at once!
+  - Sequence millions and even billions of DNA reads at once!
 
 > Not really 'next' anymore, consider it more 'second' generation (see: Nanopore)
+
+# What is NGS?
+
+<iframe src='https://gfycat.com/ifr/BlackGreedyAurochs' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe><p> <a style="font-size:12px" href="https://gfycat.com/blackgreedyaurochs">via Gfycat</a></p>
+
+# What is NGS?
 
 <div>
   <span style="">Market leader:</span>
   <img style="vertical-align:middle" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200>
 </div>
 
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Illumina_HiSeq_2500.jpg)
+
+<a title="Konrad Förstner, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg"><img width="512" alt="Illumina HiSeq 2500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Illumina_HiSeq_2500.jpg/512px-Illumina_HiSeq_2500.jpg"></a>
+
+(Others: Roche 454, PacBio, IonTorrent etc.)
+
 # How does it work?
 
-Basically same concept, but 
+Basically same concept, but with pretty pictures!
+
+i.e. attach flouresent nucleotides, one colour per `A` `C` `G` `T`
+
+<p style="color:red"><b>A</b></p>
+<p style="color:blue"><b>G</b></p>
+<p style="color:green"><b>T</b></p>
+<p style="color:gold"><b>C</b></p>
+
+Fire a lazer and take a picture!
+
+# Where does this happen?
+
+Flow cell (map)
+
+Has Lawn
+
+# Where does this happen?
+
+But how do you get your DNA to attach to the lawn?
+
+Libray construction = adapters+ indexes
+
+# Sequencing-by-synthesis
+
+Once attached, make lots of copies (clustering)
+
+# Sequencing-by-synthesis
+
+Separate, add primer
+
+# Sequencing-by-synthesis
+
+Add the flouresnt nucleotides, only complement will bind
+
+# Sequencing-by-synthesis
+
+Fire the lazer, and take a photo
+
+# Rinse and repeat!
+
+# Improving quality
+
+Throughout limits
+
+Paired end
+
+# Paired end sequencing
+
+Once end, bendover, attach other end (turnaround) and start from the _end_ of the molecule
+
+# Cons of NGS sequencing
+
+- less accurate (laser/photo can get wrong)
+- chemistry limits (DNA strands gets old through heat cycling for denautring; dirty environment from suboptiomal wash steps etc.) mean short reads (compensated by volume)
+
 
 
 
