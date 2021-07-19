@@ -46,11 +46,11 @@ css: slides.css
 # What is DNA?
 
 
-<a title="Zephyris, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://en.wikipedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"><img width="512" alt="Structure ADN" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/1024px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"></a>
+<a title="Zephyris, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://en.wikipedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"><img width="512" alt="Structure ADN" src="assets/img/604px-DNA_Structure+Key+Labelled.pn_NoBB.png"></a>
 
 # What is DNA?
 
-<a title="Pradana Aumars, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="512" alt="Structure ADN" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Structure_ADN.png"></a>
+<a title="Pradana Aumars, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="512" alt="Structure ADN" src="assets/img/Structure_ADN.png"></a>
 
 # The rules
 
@@ -59,10 +59,12 @@ css: slides.css
   - Purines: `G`uanine `A`denine & 
 - Base pairing: one pyrimidine with one purine
   - `C` with `G` (think: CGI)
-  - `A` to `T` (think: AT-AT walker)
+  - `A` with `T` (think: AT-AT walker)
 - Complementary
   - `C` on one strand, `G` on the other (or _v.v._)
   - `A` on one strand, `T` on the other (or _v.v._)
+
+<a title="AT-AT Walker by Nick Bluth from the Noun Project, CC BY 3.0" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="200" alt="AT-AT Walker" src="assets/img/noun_AT-AT Walker_305739.svg"></a>
 
 # The rules
 
@@ -72,13 +74,13 @@ css: slides.css
   - Make new strand: find a `C`, get new `G` (etc)
 
 <p style="align:center">
-  <a title="I, Madprime, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg"><img width="200" alt="DNA replication split" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/DNA_replication_split.svg/256px-DNA_replication_split.svg.png"></a>
+  <a title="I, Madprime, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg"><img width="200" alt="DNA replication split" src="assets/img/DNA_replication_split.svg"></a>
 </p>
   
 # How do we get DNA?
 
 
-<a title="CNX OpenStax, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg"><img width="512" alt="Figure 17 01 02" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Figure_17_01_02.jpg"></a>
+<a title="CNX OpenStax, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg"><img width="512" alt="Figure 17 01 02" src="assets/img/Figure_17_01_02.jpg"></a>
 
 # Introduction to DNA Sequencing {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
@@ -100,7 +102,7 @@ to
 
 - Sanger sequencing
 
-<a title="Estevezj, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg"><img width="512" alt="Sanger-sequencing" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sanger-sequencing.svg/512px-Sanger-sequencing.svg.png"></a>
+<a title="Estevezj, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg"><img width="512" alt="Sanger-sequencing" src="assets/img/Sanger-sequencing.svg"></a>
 
 - Separate strands, add primer (starting point)
 - Add mix of nucleotides, some with special 'terminators'
@@ -125,10 +127,6 @@ to
 
 # What is NGS?
 
-<iframe src='https://gfycat.com/ifr/BlackGreedyAurochs' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe><p> <a style="font-size:12px" href="https://gfycat.com/blackgreedyaurochs">via Gfycat</a></p>
-
-# What is NGS?
-
 <div>
   <span style="">Market leader:</span>
   <img style="vertical-align:middle" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200>
@@ -136,7 +134,7 @@ to
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Illumina_HiSeq_2500.jpg)
 
-<a title="Konrad Förstner, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg"><img width="512" alt="Illumina HiSeq 2500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Illumina_HiSeq_2500.jpg/512px-Illumina_HiSeq_2500.jpg"></a>
+<a title="Konrad Förstner, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg"><img width="512" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg"></a>
 
 (Others: Roche 454, PacBio, IonTorrent etc.)
 
@@ -144,7 +142,7 @@ to
 
 Basically same concept, but with pretty pictures!
 
-i.e. attach flouresent nucleotides, one colour per `A` `C` `G` `T`
+i.e. attach florescent nucleotides, (normally) one colour per `A` `C` `G` `T`
 
 <p style="color:red"><b>A</b></p>
 <p style="color:blue"><b>G</b></p>
@@ -153,11 +151,15 @@ i.e. attach flouresent nucleotides, one colour per `A` `C` `G` `T`
 
 Fire a lazer and take a picture!
 
+# How does it work?
+
+<iframe src='https://gfycat.com/ifr/BlackGreedyAurochs' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe><p> <a style="font-size:12px" href="https://gfycat.com/blackgreedyaurochs">via Gfycat</a></p>
+
 # Where does this happen?
 
-Flow cell (map)
+On a 'flow cell'
 
-Has Lawn
+<a title="Bronner et al. (2013) Current Protocols in Human Genetics, Volume: 79, Issue: 1, Pages: 18.2.1-18.2.42, First published: 02 January 2014, DOI: (10.1002/0471142905.hg1802s79) " href="https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/0471142905.hg1802s79#"><img alt="Next generation sequencing slide" src="assets/img/cphg1802-fig-0001-m.jpg"></a>
 
 # Where does this happen?
 
