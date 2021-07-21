@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="181.53831mm"
+   height="29.868101mm"
+   viewBox="0 0 181.53831 29.868101"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (1:1.1+202105261517+ce6663b3b7)"
+   sodipodi:docname="lib-construct.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-bbox="true"
+     inkscape:zoom="0.89231181"
+     inkscape:cx="392.23957"
+     inkscape:cy="44.267037"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid102253"
+       originx="0.031978655"
+       originy="4.7374084" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="91.508392"
+       y="364.80069"
+       width="1175.8606"
+       height="53.160385"
+       id="rect3800" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-24.243192,-92.285784)">
+    <rect
+       style="fill:#800080;stroke-width:10.5833;stroke-linecap:round;stop-color:#000000"
+       id="rect102125-6"
+       width="13.229166"
+       height="2.645833"
+       x="59.993927"
+       y="107.60652"
+       ry="1.3229141" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:'Noto Color Emoji';-inkscape-font-specification:'Noto Color Emoji, Normal';letter-spacing:0px;stroke-width:0.264583"
+       x="23.775475"
+       y="118.8413"
+       id="text1574"><tspan
+         sodipodi:role="line"
+         id="tspan1572"
+         style="stroke-width:0.264583"
+         x="23.775475"
+         y="118.8413" /></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,0,-5.2916669)"
+       id="text3798"
+       style="font-size:13.3333px;line-height:1.25;font-family:'Noto Color Emoji';-inkscape-font-specification:'Noto Color Emoji, Normal';letter-spacing:0px;white-space:pre;shape-inside:url(#rect3800)"><tspan
+         x="91.507812"
+         y="377.23665"
+         id="tspan128801"><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#008000"
+           id="tspan128785">AATGATACGGCGACCACCAC</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#800080"
+           id="tspan128787">accgacaa</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#008000"
+           id="tspan128789">CCCTACACGACGCTCTTCCGATCT</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold'"
+           id="tspan128791">XXXXXX</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#0000ff"
+           id="tspan128793">AGCACACGTCTGAACTCCAGTCAC</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#ff0000"
+           id="tspan128795">gacacta</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#0000ff"
+           id="tspan128797">CCGTCTTCTGCTTG</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold'"
+           id="tspan128799">
+</tspan></tspan><tspan
+         x="91.507812"
+         y="394.54228"
+         id="tspan128805"><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold'"
+           id="tspan128803">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+</tspan></tspan><tspan
+         x="91.507812"
+         y="411.84791"
+         id="tspan128821"><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#008000"
+           id="tspan128807">TTACTATGCCGCTGGTGGTG</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#800080"
+           id="tspan128809">tggctgtt</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#008000"
+           id="tspan128811">GGGATGTGCTGCGAGAAGGCTAGA</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold'"
+           id="tspan128813">XXXXXX</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#0000ff"
+           id="tspan128815">TCGTGTGCAGACTTGAGGTCAGTG</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#ff0000"
+           id="tspan128817">ctgtgat</tspan><tspan
+           style="font-weight:bold;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono Bold';fill:#0000ff"
+           id="tspan128819">GGCAGAAGACGAAC</tspan></tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:10.5833;stroke-linecap:round;stop-color:#000000"
+       id="rect102125"
+       width="10.318699"
+       height="2.6458306"
+       x="115.82106"
+       y="106.28361"
+       ry="1.1225133" />
+    <rect
+       style="fill:#008000;stroke:none;stroke-width:10.5833;stroke-linecap:round;stop-color:#000000"
+       id="rect102125-3"
+       width="91.28125"
+       height="2.9090803"
+       x="24.275175"
+       y="108.66619"
+       ry="0.79308176" />
+    <rect
+       style="fill:#ff0000;stroke-width:10.5833;stroke-linecap:round;stop-color:#000000"
+       id="rect102125-6-7"
+       width="13.493641"
+       height="2.6458285"
+       x="-181.70226"
+       y="107.60652"
+       ry="1.1896102"
+       transform="scale(-1,1)" />
+    <rect
+       style="fill:#0000ff;stroke-width:10.5833;stroke-linecap:round;stop-color:#000000"
+       id="rect102125-3-5"
+       width="79.374794"
+       height="2.6458335"
+       x="-205.51476"
+       y="108.92944"
+       ry="1.0259608"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="120.86146"
+       y="116.80719"
+       id="text105577"><tspan
+         sodipodi:role="line"
+         id="tspan105575"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="120.86146"
+         y="116.80719">Your</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="120.86146"
+         y="122.09885"
+         id="tspan105777">Molecule</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#800080;stroke-width:0.264583"
+       x="65.298958"
+       y="116.80719"
+       id="text105577-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#800080;stroke-width:0.264583"
+         x="65.787903"
+         y="116.80719"
+         id="tspan105777-6">Index </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="89.111458"
+       y="116.80719"
+       id="text105577-3-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+         x="89.111458"
+         y="116.80719"
+         id="tspan105777-6-2">Adapter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="149.96562"
+       y="116.80719"
+       id="text105577-3-1-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#0000ff;stroke-width:0.264583"
+         x="149.96562"
+         y="116.80719"
+         id="tspan105777-6-2-3">Adapter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
+       x="174.30731"
+       y="116.80719"
+       id="text105577-3-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#ff0000;stroke-width:0.264583"
+         x="174.79626"
+         y="116.80719"
+         id="tspan105777-6-9">Index </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="36.194794"
+       y="116.80719"
+       id="text105577-3-1-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+         x="36.194794"
+         y="116.80719"
+         id="tspan105777-6-2-0">Primer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#008000;stroke-width:0.264583"
+       x="194.94479"
+       y="116.80719"
+       id="text105577-3-1-7-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;text-anchor:middle;fill:#0000ff;stroke-width:0.264583"
+         x="194.94479"
+         y="116.80719"
+         id="tspan105777-6-2-0-0">Primer</tspan></text>
+  </g>
+</svg>

@@ -132,24 +132,24 @@ to
   <img style="vertical-align:middle" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200>
 </div>
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Illumina_HiSeq_2500.jpg)
-
 <a title="Konrad Förstner, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg"><img width="512" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg"></a>
 
 (Others: Roche 454, PacBio, IonTorrent etc.)
 
 # How does it work?
 
-Basically same concept, but with pretty pictures!
+- Basically same concept, but:
+  - no size separation 
+  - with pretty pictures!
 
-i.e. attach florescent nucleotides, (normally) one colour per `A` `C` `G` `T`
+i.e. attach florescent nucleotides, (normally) one colour per base
 
 <p style="color:red"><b>A</b></p>
 <p style="color:blue"><b>G</b></p>
 <p style="color:green"><b>T</b></p>
 <p style="color:gold"><b>C</b></p>
 
-Fire a lazer and take a picture!
+Fire mah lazer, and take a picture! Rinse and repeat!
 
 # How does it work?
 
@@ -165,7 +165,18 @@ On a 'flow cell'
 
 But how do you get your DNA to attach to the lawn?
 
-Libray construction = adapters+ indexes
+- Convert it to _library_:
+  - Add adapters
+  - Add indexes
+  - Add priming sites
+
+<style>
+ span.minicode {font-family: monospace;font-size: 14px}
+</style>
+
+<span class="minicode" style="color:green">AATGATACGGCGACCACCAC</span><span class="minicode" style="color:purple">accgacaa</span><span class="minicode" style="color:green">CCCTACACGACGCTCTTCCGATCT</span><span class="minicode" style="color:black">XXXXXX</span><span class="minicode" style="color:blue">AGCACACGTCTGAACTCCAGTCAC</span><span class="minicode" style="color:red">gacacta</span><span class="minicode" style="color:blue">CCGTCTTCTGCTTG</span>
+<span class="minicode" style="color:green">||||||||||||||||||||</span><span class="minicode" style="color:purple">||||||||</span><span class="minicode" style="color:green">||||||||||||||||||||||||</span><span class="minicode" style="color:black">||||||</span><span class="minicode" style="color:blue">||||||||||||||||||||||||</span><span class="minicode" style="color:red">|||||||</span><span class="minicode" style="color:blue">||||||||||||||</span>
+<span class="minicode" style="color:green">TTACTATGCCGCTGGTGGTG</span><span class="minicode" style="color:purple">tggctgtt</span><span class="minicode" style="color:green"></span><span class="minicode" style="color:green">GGGATGTGCTGCGAGAAGGCTAGA</span><span class="minicode" style="color:black">XXXXXX</span><span class="minicode" style="color:blue">TCGTGTGCAGACTTGAGGTCAGTG</span><span class="minicode" style="color:red">ctgtgat</span><span class="minicode" style="color:blue">GGCAGAAGACGAAC</span>
 
 # Sequencing-by-synthesis
 
@@ -177,7 +188,7 @@ Separate, add primer
 
 # Sequencing-by-synthesis
 
-Add the flouresnt nucleotides, only complement will bind
+Add the florescent nucleotides, only complement will bind
 
 # Sequencing-by-synthesis
 
