@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
+/* backgrounds */
+
 .reveal .slide-background {
     display: none;
     position: absolute;
@@ -17,6 +19,8 @@
     background-image: url(assets/img/IMPRS_SHH_SummerSchool_2021-NormalSlide.jpg);
     background-size: contain;
 }
+
+/* basic text */
 
 .reveal h1 {
     font-family: 'Fira Sans', sans-serif;
@@ -49,6 +53,9 @@
     font-size: 21;
     color: #1d1d1b;
 }
+
+
+/* markdown objects */
 
 .reveal a {
     color: #a4ddd4;
@@ -84,6 +91,8 @@
     background-color: #d8d8d8;
 }
 
+/* slideshow status */
+
 .reveal .progress {
   background-color: #d8d8d8;
   height: 0.5%;
@@ -92,5 +101,7 @@
 .reveal .progress span {
   background: #007d7a;
 }
+
+/* images*/
 
 .reveal section img { background:none; border:none; box-shadow:none; }

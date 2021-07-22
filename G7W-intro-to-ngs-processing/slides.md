@@ -122,6 +122,8 @@ to
 - NGS: Next Generation Sequencing
   - MASSIVELY multiplexed! 
   - Sequence millions and even billions of DNA reads at once!
+  - Sequence lots of samples at once!
+  - Fast and cheap!
 
 > Not really 'next' anymore, consider it more 'second' generation (see: Nanopore)
 
@@ -142,7 +144,7 @@ to
   - no size separation 
   - with pretty pictures!
 
-i.e. attach florescent nucleotides, (normally) one colour per base
+i.e. attach fluorophore-modified nucleotides, (normally) one colour per base
 
 <p style="color:red"><b>A</b></p>
 <p style="color:blue"><b>G</b></p>
@@ -163,12 +165,14 @@ On a 'flow cell'
 
 # Where does this happen?
 
-But how do you get your DNA to attach to the lawn?
+**But how do you get your DNA to attach to the lawn**
+
+**(and not get lost)?**
 
 - Convert it to _library_:
-  - Add adapters
-  - Add indexes
-  - Add priming sites
+  - Add adapters: bind to the 'lawn' of the flow cell
+  - Add indexes: sample-specific barcode
+  - Add priming sites: where enzymes start copying DNA
 
 <style>
  span.minicode {font-family: monospace;font-size: 14px}
@@ -178,29 +182,35 @@ But how do you get your DNA to attach to the lawn?
 <span class="minicode" style="color:green">||||||||||||||||||||</span><span class="minicode" style="color:purple">||||||||</span><span class="minicode" style="color:green">||||||||||||||||||||||||</span><span class="minicode" style="color:black">||||||</span><span class="minicode" style="color:blue">||||||||||||||||||||||||</span><span class="minicode" style="color:red">|||||||</span><span class="minicode" style="color:blue">||||||||||||||</span>
 <span class="minicode" style="color:green">TTACTATGCCGCTGGTGGTG</span><span class="minicode" style="color:purple">tggctgtt</span><span class="minicode" style="color:green"></span><span class="minicode" style="color:green">GGGATGTGCTGCGAGAAGGCTAGA</span><span class="minicode" style="color:black">XXXXXX</span><span class="minicode" style="color:blue">TCGTGTGCAGACTTGAGGTCAGTG</span><span class="minicode" style="color:red">ctgtgat</span><span class="minicode" style="color:blue">GGCAGAAGACGAAC</span>
 
-# Sequencing-by-synthesis
-
-Once attached, make lots of copies (clustering)
+<span class="minicode" style="color:green">[Adapter & Index Primer] </span><span class="minicode" style="color:purple">[Index] </span><span class="minicode" style="color:green">[Target primer] </span><span class="minicode" style="color:black">[Target] </span><span class="minicode" style="color:blue">[Target primer] </span><span class="minicode" style="color:red">[Index] </span><span class="minicode" style="color:blue">[Adapter & Index Primer]</span>
 
 # Sequencing-by-synthesis
 
-Separate, add primer
+Add DNA to flow cell, but problem: florescence of one single nucleotide not enough...
+
+<a title="DMLapato, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cluster_Generation.png"><img alt="Cluster Generation" src="assets/img/Cluster_Generation.png"></a>
+
+Make lots of copies!
+
 
 # Sequencing-by-synthesis
 
-Add the florescent nucleotides, only complement will bind
+<a title="Abizar Lakdawalla , CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via https://openlab.citytech.cuny.edu/" href="https://openlab.citytech.cuny.edu/bio-oer/analyzing-dna/next-gen-sequencing/"><img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png"></a>
 
-# Sequencing-by-synthesis
+1. Add florescent nucleotides (complementary will bind)
+2. Fire laser & take photo
+3. Wash away unbound nucleotides
+4. Remove fluorophore
+5. Back to **1** ⤴️
 
-Fire the lazer, and take a photo
+# What does this look like?
 
-# Rinse and repeat!
+<a title="EMBL-EBI Training, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via https://www.ebi.ac.uk/training/" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/"><img width="750" alt="Cluster Generation" src="assets/img/illumina4.png"></a>
 
 # Improving quality
 
-Throughout limits
-
-Paired end
+- Over time, imaging reagents get 'tired' and more errors occur
+- What if molecule is longer than cycles of imaging?
 
 # Paired end sequencing
 
