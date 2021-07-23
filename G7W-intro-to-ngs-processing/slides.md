@@ -14,6 +14,7 @@ output:
 css: slides.css
 ---
 
+
 # Who am I?
 
 - Education
@@ -33,6 +34,7 @@ css: slides.css
 
 # Today we will 
 
+1. Describe basics of DNA
 1. Introduce what DNA sequencing is
 2. Explain how Illumina **NGS** sequencing **data** is generated
 3. How to evaluating NGS data [Practical]
@@ -111,17 +113,17 @@ to
 # Pros and cons of Sanger Sequencing
 
 - Pros
-  - More precise (less errors)
-  - Longer reads
+  - Very precise (few errors, still the 'gold standard')
+  - Sequence long DNA molecules 
 - Cons
-  - Resource heavy: lot of input DNA
+  - Resource heavy, requiring lot of input DNA
   - Slow: one. fragment. at. a. time.
 
 # What is NGS?
 
-- NGS: Next Generation Sequencing
-  - MASSIVELY multiplexed! 
+- "Next Generation Sequencing"
   - Sequence millions and even billions of DNA reads at once!
+  - via MASSIVE multiplexing!
   - Sequence lots of samples at once!
   - Fast and cheap!
 
@@ -144,7 +146,7 @@ to
   - no size separation 
   - with pretty pictures!
 
-i.e. attach fluorophore-modified nucleotides, (normally) one colour per base
+i.e. to a strand, attach a complementary fluorophore-modified nucleotide, (normally) one colour per base
 
 <p style="color:red"><b>A</b></p>
 <p style="color:blue"><b>G</b></p>
@@ -186,12 +188,12 @@ On a 'flow cell'
 
 # Sequencing-by-synthesis
 
-Add DNA to flow cell, but problem: florescence of one single nucleotide not enough...
+Once bound, florescence of one molecule not enough...
 
-<a title="DMLapato, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cluster_Generation.png"><img alt="Cluster Generation" src="assets/img/Cluster_Generation.png"></a>
+<a title="DMLapato, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cluster_Generation.png"><img width=512 alt="Cluster Generation" src="assets/img/Cluster_Generation.png"></a>
 
-Make lots of copies!
-
+Make lots of copies, a.k.a. clustering!
+One cluster == many copies of one DNA molecule
 
 # Sequencing-by-synthesis
 
@@ -210,17 +212,78 @@ Make lots of copies!
 # Improving quality
 
 - Over time, imaging reagents get 'tired' and more errors occur
+  - Polymerases aren't perfect
+  - Bases sometimes don't bind, or multiple == clusters 'desynced'
+  - With each 'photo', machine calculates probability it got the 'right' nucleotide
+  - Each photo of each cluster gets a 'base-quality' score
 - What if molecule is longer than cycles of imaging?
+
+- Improvement: **paired-end sequencing**
+  - Get order of nucleotides by sequencing from one end
+  - Get reverse order of nucleotides, by sequencing from the other end
 
 # Paired end sequencing
 
-Once end, bendover, attach other end (turnaround) and start from the _end_ of the molecule
+<a title="MiSeq™, HiSeq™ 1000/1500/2000/2500 and NovaSeq™ 6000 v1.0 reagents paired-end flow cell, © 2021 Illumina, Inc. All rights reserved. Used here for training purposes only." href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html"><img width="750" alt="MiSeq™, HiSeq™ 1000/1500/2000/2500 and NovaSeq™ 6000 v1.0 reagents paired-end flow cell, © 2021 Illumina, Inc. All rights reserved. Used here for training purposes only" src="assets/img/PEcell1.png"></a>
+
+<a style="font-size:12px" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2021 Illumina, Inc. All rights reserved. Used here for training purposes only.</a>
+
+# Photos to DNA string
+
+- Special software (e.g. `bcl2fastq`):
+ 
+- For each location on the flow cell (cluster):
+  - Record the sequence of bases (from colours)
+  - Calculates a probability the 'base call' is correct 
+    i.e. blurry or weak image?
+  - Note the index in the sequence (sample-specific barcode)
+- Group each recorded sequence or 'reads' with those with the same index 
+  - a.k.a. demultiplexing
+  
+# FASTQ File
+
+> FASTQ format is a text-based format for storing both a biological sequence (usually nucleotide sequence) and its corresponding quality scores. Both the sequence letter and quality score are each encoded with a single ASCII character for brevity. - [Wikipedia](https://en.wikipedia.org/wiki/FASTQ_format)
+
+# FASTQ File
+
+Example
+
+```
+@K00233:37:HGHLYBBXX:3:1101:2646:1121 1:N:0:NACGCATC+NGCTAATG
+NCGCATGAGCCGCCTGTATCAGGCGCTGATCGAACCGGGCATTGCAGTTGGGATAGATCGGAAGAGCACACGTCTG
++
+#A7F<<AA<JFJFJJJJJJFFJJJJJJJAFFJFJJJJJJJFJAFFFJAJFJJ<FJJJJJFFF<FFA--FFFJJJJJ
+@K00233:37:HGHLYBBXX:3:1101:4655:1121 1:N:0:NACGCATC+NGCTAATG
+NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
++
+#AA-<FFFF7JFF7JJJJJFJJ<JJJJJA7FJJJJJJJFF<JFF<J7-<FJJJJFJFFJJJAAAAFFJJ--AJAJJ
+```
+
+```
+@ <read id, e.g. machine ID, location on flowcell> <extra metadata>
+  <DNA sequence>
++ <a separator>
+  <base quality scores for each nucleotide in sequence>
+```
+
+Quality score
+
+```
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHI
+0.2......................26...31........41          
+```
 
 # Cons of NGS sequencing
 
 - less accurate (laser/photo can get wrong)
-- chemistry limits (DNA strands gets old through heat cycling for denautring; dirty environment from suboptiomal wash steps etc.) mean short reads (compensated by volume)
+- chemistry limits (DNA strands gets old through heat cycling for denaturing; dirty environment from suboptiomal wash steps etc.) mean short reads (compensated by volume)
 
+# Things to remember
 
+- Indexs
+- Adapters
+- Cycle-quality decay
+- paired-ends!
 
+<!-- TODO ADD ALL CREDITS FOR IMAGES UNDER EACH A LA THE ILLUMINA ONE -->
 

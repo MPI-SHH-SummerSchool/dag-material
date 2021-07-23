@@ -76,7 +76,6 @@
     font-family: 'Fira Code';
     border-left: 0.3em solid #ccc;
     padding: 0 15px;
-    font-style: italic;
     color: #1d1d1b;
     quotes: "\201C""\201D""\2018""\2019";
     font-size: 18px;
@@ -85,7 +84,6 @@
 
 .reveal code {
     font-family: 'Fira Code';
-    font-style: italic;
     quotes: "\201C""\201D""\2018""\2019";
     color: #1d1d1b;
     background-color: #d8d8d8;
