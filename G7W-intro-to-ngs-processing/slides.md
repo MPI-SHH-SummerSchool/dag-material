@@ -27,10 +27,11 @@ css: slides.css
   - Number of bioinformatics classes taken: 0
 
 <div>
-  <img style="vertical-align:middle" src="https://openmoji.org/data/color/svg/E040.svg" width=50>
-  <img style="vertical-align:middle" src="https://openmoji.org/data/color/svg/E045.svg" width=50>
+  <img style="vertical-align:middle;margin:0" src="assets/img/E040.svg" width=50>
+  <img style="vertical-align:middle;margin:0" src="assets/img/E045.svg" width=50>
   <span style=""> @jfy133</span>
 </div>
+<a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a>
 
 # Today we will 
 
@@ -39,7 +40,7 @@ css: slides.css
 2. Explain how Illumina **NGS** sequencing **data** is generated
 3. How to evaluating NGS data [Practical]
 
-# Introduction DNA {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
+# Introduction to DNA {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
 # What is DNA?
 
@@ -48,11 +49,13 @@ css: slides.css
 # What is DNA?
 
 
-<a title="Zephyris, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://en.wikipedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png"><img width="512" alt="Structure ADN" src="assets/img/604px-DNA_Structure+Key+Labelled.pn_NoBB.png"></a>
+<img width="512" alt="Structure ADN" src="assets/img/604px-DNA_Structure+Key+Labelled.pn_NoBB.png">
+<a style="font-size:12px" href="https://en.wikipedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png">Zephyris, CC BY-SA 3.0 via Wikimedia Commons</a>
 
 # What is DNA?
 
-<a title="Pradana Aumars, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="512" alt="Structure ADN" src="assets/img/Structure_ADN.png"></a>
+<img width="512" alt="Structure ADN" src="assets/img/Structure_ADN.png">
+<a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png">Pradana Aumars, CC BY-SA 4.0, via Wikimedia Commons</a>
 
 # The rules
 
@@ -66,7 +69,8 @@ css: slides.css
   - `C` on one strand, `G` on the other (or _v.v._)
   - `A` on one strand, `T` on the other (or _v.v._)
 
-<a title="AT-AT Walker by Nick Bluth from the Noun Project, CC BY 3.0" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png"><img width="200" alt="AT-AT Walker" src="assets/img/noun_AT-AT Walker_305739.svg"></a>
+<img width="125" style="display:block;margin-left:auto;margin-right:auto" alt="AT-AT Walker" src="assets/img/noun_AT-AT Walker_305739.svg">
+<a style="font-size:12px" href="https://thenounproject.com/term/at-at-walker/305739/">AT-AT Walker by Nick Bluth from the Noun Project, CC BY 3.0</a>
 
 # The rules
 
@@ -75,14 +79,23 @@ css: slides.css
   - Separate the strands
   - Make new strand: find a `C`, get new `G` (etc)
 
-<p style="align:center">
-  <a title="I, Madprime, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg"><img width="200" alt="DNA replication split" src="assets/img/DNA_replication_split.svg"></a>
-</p>
-  
+  <img width="150" style="display:block;margin-left:auto;margin-right:auto" alt="DNA replication split" src="assets/img/DNA_replication_split.svg"></a>
+  <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg">I, Madprime, CC0, via Wikimedia Commons</a>
+
 # How do we get DNA?
 
+<img width="700" alt="Figure 17 01 02" src="assets/img/Figure_17_01_02.jpg">
+<a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg">CNX OpenStax, CC BY 4.0, via Wikimedia Commons</a>
 
-<a title="CNX OpenStax, CC BY 4.0 &lt;https://creativecommons.org/licenses/by/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg"><img width="512" alt="Figure 17 01 02" src="assets/img/Figure_17_01_02.jpg"></a>
+# What about ancient DNA?
+
+- Basically the same, except: aDNA molecules are degraded
+  - Fragmented (**short** molecules)
+  - Damaged (modified nucleotides)
+  
+<a title="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." href="https://www.lucyreading.co.uk/project/ancient-dna/"><img width="365" alt="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." src="assets/img/LucyReading_AncientDNA_MODIFIED.gif"></a>
+
+<a style="font-size:12px" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2015 Lucy Reading / The Scientist. All rights reserved. Modified and used here for training purposes only.</a>
 
 # Introduction to DNA Sequencing {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
@@ -95,20 +108,21 @@ to
 ```ACTG``` on your computer screen
 
 <p align="center">
-<img src="https://openmoji.org/data/color/svg/1F9EC.svg" width="20%">
-<img src="https://openmoji.org/data/color/svg/27A1.svg" width="20%">
-<img src="https://openmoji.org/data/color/svg/1F5A5.svg" width="20%">
+<img style=";margin:0" src="assets/img/1F9EC.svg" width="20%">
+<img style=";margin:0"  src="assets/img/27A1.svg" width="20%">
+<img style=";margin:0" src="assets/img/1F5A5.svg" width="20%">
 </p>
+<a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a>
 
 # Historically
 
+<img width="500" style="margin:0 25% 0 25%" alt="Sanger-sequencing" src="assets/img/Sanger-sequencing.svg">
+<a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg">Estevezj, CC BY-SA 3.0 via Wikimedia Commons</a>
+
 - Sanger sequencing
-
-<a title="Estevezj, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg"><img width="512" alt="Sanger-sequencing" src="assets/img/Sanger-sequencing.svg"></a>
-
-- Separate strands, add primer (starting point)
-- Add mix of nucleotides, some with special 'terminators'
-- Pass through size-filtering, read order of terminators
+  - Separate strands, add primer (starting point)
+  - Add mix of nucleotides, some with special 'terminators'
+  - Pass through size-filtering, read order of terminators
 
 # Pros and cons of Sanger Sequencing
 
@@ -133,10 +147,11 @@ to
 
 <div>
   <span style="">Market leader:</span>
-  <img style="vertical-align:middle" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200>
+  <img style="vertical-align:middle;margin:0" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200>
 </div>
 
-<a title="Konrad Förstner, CC0, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg"><img width="512" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg"></a>
+<img width="512" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg">
+<a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg">Konrad Förstner, CC0, via Wikimedia Commons</a>
 
 (Others: Roche 454, PacBio, IonTorrent etc.)
 
@@ -157,13 +172,15 @@ Fire mah lazer, and take a picture! Rinse and repeat!
 
 # How does it work?
 
-<iframe src='https://gfycat.com/ifr/BlackGreedyAurochs' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe><p> <a style="font-size:12px" href="https://gfycat.com/blackgreedyaurochs">via Gfycat</a></p>
+<iframe src='https://gfycat.com/ifr/BlackGreedyAurochs' frameborder='0' scrolling='no' allowfullscreen width='640' height='412'></iframe>
+<a style="font-size:12px" href="https://gfycat.com/blackgreedyaurochs">via Gfycat</a>
 
 # Where does this happen?
 
 On a 'flow cell'
 
-<a title="Bronner et al. (2013) Current Protocols in Human Genetics, Volume: 79, Issue: 1, Pages: 18.2.1-18.2.42, First published: 02 January 2014, DOI: (10.1002/0471142905.hg1802s79) " href="https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/0471142905.hg1802s79#"><img alt="Next generation sequencing slide" src="assets/img/cphg1802-fig-0001-m.jpg"></a>
+<img style="display:block;margin-left:auto;margin-right:auto" alt="Next generation sequencing slide" src="assets/img/cphg1802-fig-0001-m.jpg"></a>
+<a style="font-size:12px" href="https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/0471142905.hg1802s79#">Bronner et al. (2013) Current Protocols in Human Genetics, DOI: (10.1002/0471142905.hg1802s79)</a>
 
 # Where does this happen?
 
@@ -190,43 +207,47 @@ On a 'flow cell'
 
 Once bound, florescence of one molecule not enough...
 
-<a title="DMLapato, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cluster_Generation.png"><img width=512 alt="Cluster Generation" src="assets/img/Cluster_Generation.png"></a>
+<img width=480 alt="Cluster Generation" src="assets/img/Cluster_Generation.png">
+<a style="font-size:12px">DMLapato, CC BY-SA 4.0, via Wikimedia Commons</a>
 
-Make lots of copies, a.k.a. clustering!
-One cluster == many copies of one DNA molecule
+- Make lots of copies, a.k.a. clustering!
+- One cluster == many copies of one DNA molecule
 
 # Sequencing-by-synthesis
 
-<a title="Abizar Lakdawalla , CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via https://openlab.citytech.cuny.edu/" href="https://openlab.citytech.cuny.edu/bio-oer/analyzing-dna/next-gen-sequencing/"><img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png"></a>
+<img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png">
+<a style="font-size:12px">Abizar Lakdawalla , CC BY 3.0, via https://openlab.citytech.cuny.edu/</a>
 
 1. Add florescent nucleotides (complementary will bind)
-2. Fire laser & take photo
-3. Wash away unbound nucleotides
+2. Wash away unbound nucleotides
+3. Fire laser & take photo
 4. Remove fluorophore
 5. Back to **1** ⤴️
 
 # What does this look like?
 
-<a title="EMBL-EBI Training, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via https://www.ebi.ac.uk/training/" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/"><img width="750" alt="Cluster Generation" src="assets/img/illumina4.png"></a>
+<img style="display:block;margin-left:auto;margin-right:auto"  width="750" alt="Cluster Generation" src="assets/img/illumina4.png">
+<a style="font-size:12px" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/">EMBL-EBI Training, CC BY-SA 4.0, via https://www.ebi.ac.uk/training/</a>
 
 # Improving quality
 
 - Over time, imaging reagents get 'tired' and more errors occur
-  - Polymerases aren't perfect
   - Bases sometimes don't bind, or multiple == clusters 'desynced'
-  - With each 'photo', machine calculates probability it got the 'right' nucleotide
-  - Each photo of each cluster gets a 'base-quality' score
-- What if molecule is longer than cycles of imaging?
+  - **Base-quality**: machine calculates probability it got the 'right' nucleotide for each photo
+  - 'Dead' base call: typically reported as `N`
+
+- How to improve or correct?
+
+# Improving quality
 
 - Improvement: **paired-end sequencing**
   - Get order of nucleotides by sequencing from one end
-  - Get reverse order of nucleotides, by sequencing from the other end
+  - Get reverse order of nucleotides - sequence other end!
+  - Bonus: sequence more of read longer than cycles
+  
+<img width="640" alt="MiSeq™, HiSeq™ 1000/1500/2000/2500 and NovaSeq™ 6000 v1.0 reagents paired-end flow cell, © 2021 Illumina, Inc. All rights reserved. Used here for training purposes only" src="assets/img/PEcell1.png">
 
-# Paired end sequencing
-
-<a title="MiSeq™, HiSeq™ 1000/1500/2000/2500 and NovaSeq™ 6000 v1.0 reagents paired-end flow cell, © 2021 Illumina, Inc. All rights reserved. Used here for training purposes only." href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html"><img width="750" alt="MiSeq™, HiSeq™ 1000/1500/2000/2500 and NovaSeq™ 6000 v1.0 reagents paired-end flow cell, © 2021 Illumina, Inc. All rights reserved. Used here for training purposes only" src="assets/img/PEcell1.png"></a>
-
-<a style="font-size:12px" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2021 Illumina, Inc. All rights reserved. Used here for training purposes only.</a>
+<a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2021 Illumina, Inc. All rights reserved. Used here for training purposes only.</a>
 
 # Photos to DNA string
 
@@ -261,7 +282,7 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 
 ```
 @ <read id, e.g. machine ID, location on flowcell> <extra metadata>
-  <DNA sequence>
+  <DNA sequence; Note: N = base couldn't be called!>
 + <a separator>
   <base quality scores for each nucleotide in sequence>
 ```
@@ -269,21 +290,151 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 Quality score
 
 ```
-!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHI
+!"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJ
 0.2......................26...31........41          
 ```
 
-# Cons of NGS sequencing
-
-- less accurate (laser/photo can get wrong)
-- chemistry limits (DNA strands gets old through heat cycling for denaturing; dirty environment from suboptiomal wash steps etc.) mean short reads (compensated by volume)
 
 # Things to remember
 
-- Indexs
-- Adapters
-- Cycle-quality decay
-- paired-ends!
+- Adapters and indices
+  - a.k.a. sequencing 'artefacts' not the real DNA molecule!
+- Base qualities
+  - Cycle-quality decay
+- Paired-end sequencing!
+  - Merge together: better confidence in base call
+  
+# Recap
+
+- DNA molecules essentially: 
+  - Made up of nucleotides (`ACTG`)
+  - Two strands: complementary base pairs (`C-G`, `A-T`)
+  - aDNA are fragmented molecules: **short**
+- NGS Sequencing: 
+  - Massively multiplexed: millions DNA molecules at once
+  - Add **adapters** to bind to a glass slide
+  - Make new strand, adding **florescent nucleotides**
+  - Fire laser at each nucleotide and take photo
+- Results in **FASTQ* file
+  - Has base quality scores
 
 <!-- TODO ADD ALL CREDITS FOR IMAGES UNDER EACH A LA THE ILLUMINA ONE -->
+
+<!-- questions to ask 
+
+
+1. Why do ends go down?
+3. Why are there so many adapter sequences in this ancient DNA library?
+2. What is the sequencing cycle limit of this PE run?
+
+
+-->
+
+# Practical: Introduction to NGS data processing {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
+
+# Working on the command-line
+
+What is the command line?
+
+> A command-line interface (CLI) processes commands to a computer program in the form of lines of text. - [Wikipedia](https://en.wikipedia.org/wiki/Command-line_interface)
+
+- i.e. use words, not point and click with mouse
+- **Important**: more efficient/scalable & more reproducible
+- Most **bioinformatics** work is performed via command line
+  - Often as working on remote _servers_ (i.e. very large computers with no screen)
+  
+# Logging into a server
+
+1. Open browser
+2. Go to: <LINK>
+3. Log-in with your credentials
+
+# The command line
+
+> A command prompt (or just prompt) is a sequence of (one or more) characters used in a command-line interface to indicate readiness to accept commands. - [Wikipedia](#https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt)
+
+```bash
+james_fellows_yates@bionc21:~$ 
+```
+```console
+<username>@<machine_name>:<current_directory>$
+```
+
+- Everything _after_ `$` is where you type your _command_ 
+- Never copy and paste the prompt!
+- ⚠️Prompts look different on different machines!
+
+# Your first command
+
+Type in everything _after_ the prompt, and press enter/return (⏎) on your keyboard with
+
+```bash
+$ echo "Hello world!"
+```
+```console
+Hello world!
+```
+
+- Command typically consists of:
+  1. Program/software/tool name
+  2. Arguments (e.g. input files)
+  3. Options or flags (e.g. `-h` or `--help`)
+  
+# Move around
+
+What is in the room (directory)
+
+```bash
+$ ls
+```
+
+Lets go in the directory, and see what's in there!
+
+```bash
+$ cd input/
+$ ls -l
+```
+
+How to go back?
+
+```bash
+$ cd ../
+```
+
+  
+# Your first bioinformatic job
+
+We will run the [nf-core/eager](https://nf-co.re/eager) pipeline.
+
+> nf-core/eager is a scalable and reproducible bioinformatics best-practise processing pipeline for genomic NGS sequencing data, with a focus on ancient DNA (aDNA) data. It is ideal for the (palaeo)genomic analysis of humans, animals, plants, microbes and even microbiomes.
+
+Pipeline (software): a chain of data-processing processes or other software entities
+
+<img href="https://raw.githubusercontent.com/nf-core/eager/2.3.5/docs/images/usage/eager2_workflow.png">
+
+# Run your first bioinformatic job
+
+```bash
+nextflow nf-core/eager -profile singularity,test_tsv --input input/fastqs.tsv
+```
+
+# Check the results
+
+What is the output?
+
+```bash
+ls
+```
+
+```bash
+cd results/
+```
+
+```bash
+multiqc/
+```
+
+# Practical: Introduction to NGS data quality control {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
+
+# MultiQC Report
 
