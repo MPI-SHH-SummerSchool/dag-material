@@ -7,6 +7,8 @@ output:
   revealjs::revealjs_presentation:
     template: assets/modifiedTemplate.html
     transition: 'slide'
+    self_contained: false
+    reveal_plugins: ["notes"]
     reveal_options:
       slideNumber: true
       progress: true
@@ -207,11 +209,21 @@ On a 'flow cell'
 
 Once bound, florescence of one molecule not enough...
 
-<img width=480 alt="Cluster Generation" src="assets/img/Cluster_Generation.png">
+<img width=480 alt="Cluster Generation via bridge amplification" src="assets/img/Cluster_Generation.png">
 <a style="font-size:12px">DMLapato, CC BY-SA 4.0, via Wikimedia Commons</a>
 
-- Make lots of copies, a.k.a. clustering!
+- Make lots of copies via bridge amplification a.k.a. clustering!
 - One cluster == many copies of one DNA molecule
+
+<aside class="notes">
+
+- Lawn oligos have both adapter types
+- A SSed molecule binds to one lawn oligo
+- bend molecule over so other end binds to complementary oligo of other end
+- Fill in to double strand, denature to separate two strands, and repeated
+- Clip off all P5 (other end) adapters to leave only FORWARD read
+
+</aside>
 
 # Sequencing-by-synthesis
 
@@ -248,6 +260,13 @@ Once bound, florescence of one molecule not enough...
 <img width="640" alt="MiSeq™, HiSeq™ 1000/1500/2000/2500 and NovaSeq™ 6000 v1.0 reagents paired-end flow cell, © 2021 Illumina, Inc. All rights reserved. Used here for training purposes only" src="assets/img/PEcell1.png">
 
 <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2021 Illumina, Inc. All rights reserved. Used here for training purposes only.</a>
+
+<aside class="notes">
+
+- Remember on first time around: Clipped off all P5 (other end) adapters to leave only FORWARD read
+- Perform bridge amplifcation (bend over), but this time clip off ONLY P7 (orignal end/forward), to leave just reverse
+
+</aside>
 
 # Photos to DNA string
 
@@ -401,6 +420,12 @@ How to go back?
 $ cd ../
 ```
 
+# Your first bioinformatic job
+
+1. Check quality of sequencing/reads
+2. Remove adapters
+3. Merge paired-end reads
+4. Check quality of reads again
   
 # Your first bioinformatic job
 
@@ -411,6 +436,7 @@ We will run the [nf-core/eager](https://nf-co.re/eager) pipeline.
 Pipeline (software): a chain of data-processing processes or other software entities
 
 <img href="https://raw.githubusercontent.com/nf-core/eager/2.3.5/docs/images/usage/eager2_workflow.png">
+
 
 # Run your first bioinformatic job
 
