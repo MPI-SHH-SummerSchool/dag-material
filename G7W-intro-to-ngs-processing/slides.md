@@ -16,6 +16,14 @@ output:
 css: slides.css
 ---
 
+# Why study genetics?
+
+DNA gives instructions for functioning, growth, and reproduction of organisms: living _and_ dead
+
+<img width=45% alt="Sources of aDNA" src="assets/img/1-s2.0-S0169534715001597-gr1.jpg">
+<a style="font-size:12px" href="https://doi.org/10.1016/j.tree.2015.06.008">Hofman et al. (2015) Trends in Eco. Evo. DOI: 10.1016/j.tree.2015.06.008</a>
+
+Carries much information about the past: ancestry, adaptation to different environments (e.g. diet), disease, etc.
 
 # Who am I?
 
@@ -27,6 +35,8 @@ css: slides.css
 - Experience
   - Number of genetics classes taken: 0
   - Number of bioinformatics classes taken: 0
+  
+> i.e., YOU CAN LEARN IT TOO! Don't need to be an expert!
 
 <div>
   <img style="vertical-align:middle;margin:0" src="assets/img/E040.svg" width=50>
@@ -38,25 +48,16 @@ css: slides.css
 # Today we will 
 
 1. Describe basics of DNA
-1. Introduce what DNA sequencing is
-2. Explain how Illumina **NGS** sequencing **data** is generated
-3. How to evaluating NGS data [Practical]
+2. Introduce what DNA sequencing is
+3. Explain how Illumina **NGS** sequencing **data** is generated
+4. How to preprocess Illumina NGS data [Practical]
+5. How to evaluate Illumina NGS data [Practical]
 
 # Introduction to DNA {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
 # What is DNA?
 
-> Deoxyribonucleic acid (/diːˈɒksɪˌraɪboʊnjuːˌkliːɪk, -ˌkleɪ-/ (DNA) is a molecule composed of two polynucleotide chains that coil around each other to form a double helix carrying genetic instructions for the development, functioning, growth and reproduction of all known organisms and many viruses. - [Wikipedia](https://en.wikipedia.org/wiki/DNA)
-
-# What is DNA?
-
-
-<img width="512" alt="Structure ADN" src="assets/img/604px-DNA_Structure+Key+Labelled.pn_NoBB.png">
-<a style="font-size:12px" href="https://en.wikipedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png">Zephyris, CC BY-SA 3.0 via Wikimedia Commons</a>
-
-# What is DNA?
-
-<img width="512" alt="Structure ADN" src="assets/img/Structure_ADN.png">
+<img style="clip-path: inset(0px 100px);object-position:95px 0" alt="Structure ADN" src="assets/img/Structure_ADN.png">
 <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png">Pradana Aumars, CC BY-SA 4.0, via Wikimedia Commons</a>
 
 # The rules
@@ -64,10 +65,10 @@ css: slides.css
 - Four nucleotides
   - Pyrimidines: `C`ytosine, `T`hymine
   - Purines: `G`uanine `A`denine & 
-- Base pairing: one pyrimidine with one purine
+- **Base** pairing: one pyrimidine with one purine
   - `C` with `G` (think: CGI)
   - `A` with `T` (think: AT-AT walker)
-- Complementary
+- **Complementary** 
   - `C` on one strand, `G` on the other (or _v.v._)
   - `A` on one strand, `T` on the other (or _v.v._)
 
@@ -76,28 +77,40 @@ css: slides.css
 
 # The rules
 
-- Make copy of a DNA strand with a _polymerase_
+- Make copy of a DNA strand a.k.a. replication
   - Unwind the DNA
   - Separate the strands
   - Make new strand: find a `C`, get new `G` (etc)
+    - via a _polymerase_ (adds from 'free' nucleotides')
 
-  <img width="150" style="display:block;margin-left:auto;margin-right:auto" alt="DNA replication split" src="assets/img/DNA_replication_split.svg"></a>
-  <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg">I, Madprime, CC0, via Wikimedia Commons</a>
+  <img width=75% style="display:block;margin-left:auto;margin-right:auto" alt="DNA replication" src="assets/img/DNA_Polymerase_DNA_Replication.png"></a>
+  <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://commons.wikimedia.org/wiki/File:DNA_Polymerase_DNA_Replication.png">Christinelmiller, CC BY-SA 4.0, via Wikimedia Commons</a>
 
 # How do we get DNA?
 
 <img width="700" alt="Figure 17 01 02" src="assets/img/Figure_17_01_02.jpg">
 <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg">CNX OpenStax, CC BY 4.0, via Wikimedia Commons</a>
 
+<aside class="notes">
+  Like long squishy spaghetti!
+</aside>
+
+
 # What about ancient DNA?
 
 - Basically the same, except: aDNA molecules are degraded
   - Fragmented (**short** molecules)
   - Damaged (modified nucleotides)
+  - Contamination (soup of modern DNA with aDNA croutons)
   
 <a title="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." href="https://www.lucyreading.co.uk/project/ancient-dna/"><img width="365" alt="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." src="assets/img/LucyReading_AncientDNA_MODIFIED.gif"></a>
 
 <a style="font-size:12px" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2015 Lucy Reading / The Scientist. All rights reserved. Modified and used here for training purposes only.</a>
+
+<aside class="notes">
+  aDNA different - like overcooking spaghetti - breaks down into smaller pieces and gets damaged
+  Also, _contamination_ from long modern DNA (high quality!)
+</aside>
 
 # Introduction to DNA Sequencing {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
@@ -116,61 +129,42 @@ to
 </p>
 <a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a>
 
-# Historically
-
-<img width="500" style="margin:0 25% 0 25%" alt="Sanger-sequencing" src="assets/img/Sanger-sequencing.svg">
-<a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg">Estevezj, CC BY-SA 3.0 via Wikimedia Commons</a>
-
-- Sanger sequencing
-  - Separate strands, add primer (starting point)
-  - Add mix of nucleotides, some with special 'terminators'
-  - Pass through size-filtering, read order of terminators
-
-# Pros and cons of Sanger Sequencing
-
-- Pros
-  - Very precise (few errors, still the 'gold standard')
-  - Sequence long DNA molecules 
-- Cons
-  - Resource heavy, requiring lot of input DNA
-  - Slow: one. fragment. at. a. time.
-
 # What is NGS?
 
+- Historically: Sanger sequencing
+  - Slow, expensive, resource hungry
 - "Next Generation Sequencing"
-  - Sequence millions and even billions of DNA reads at once!
-  - via MASSIVE multiplexing!
-  - Sequence lots of samples at once!
+  - Sequence billions of DNA reads at once!
   - Fast and cheap!
+  - Market leader: Illumina (others: PacBio, IonTorrent)
 
-> Not really 'next' anymore, consider it more 'second' generation (see: Nanopore)
+> More 'second' generation (see: Nanopore)
 
-# What is NGS?
-
-<div>
-  <span style="">Market leader:</span>
-  <img style="vertical-align:middle;margin:0" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200>
-</div>
-
-<img width="512" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg">
+<img width="250" style="display:block;margin-left:auto;margin-right:auto" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg">
 <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg">Konrad Förstner, CC0, via Wikimedia Commons</a>
 
-(Others: Roche 454, PacBio, IonTorrent etc.)
+<aside class="notes">
+  - Sanger sequencing - one molecule at a time!
+</aside>
 
 # How does it work?
 
-- Basically same concept, but:
-  - no size separation 
-  - with pretty pictures!
+Replicate a strand, but add complementary **fluorophore-modified nucleotide**, one colour per base
 
-i.e. to a strand, attach a complementary fluorophore-modified nucleotide, (normally) one colour per base
+<img width="256" style="display:block;margin-left:auto;margin-right:auto" alt="Structures of fluorescent nucleotides" src="assets/img/F1.large.jpg">
+<a style="font-size:12px" href="http://doi.org/10.1073/pnas.0609513103">Ju et al. (2006) PNAS DOI: 10.1073/pnas.0609513103 </a>
 
-<p style="color:red"><b>A</b></p>
-<p style="color:blue"><b>G</b></p>
-<p style="color:green"><b>T</b></p>
-<p style="color:gold"><b>C</b></p>
+In Illumina: <span style="color:gold"><b>A</b></span>
+<span style="color:blue"><b>G</b></span>
+<span style="color:green"><b>T</b></span>
+<span style="color:red"><b>C</b></span>
 
 Fire mah lazer, and take a picture! Rinse and repeat!
+
+<aside class="notes">
+  - When flurophore on cannot continue replication: blocks adding next nucleotide
+  - BUT can _clip off_ fluorphore!
+</aside>
 
 # How does it work?
 
@@ -179,10 +173,14 @@ Fire mah lazer, and take a picture! Rinse and repeat!
 
 # Where does this happen?
 
-On a 'flow cell'
+On a 'flow cell': glass slide with synthetic DNA 'lawn' 
 
 <img style="display:block;margin-left:auto;margin-right:auto" alt="Next generation sequencing slide" src="assets/img/cphg1802-fig-0001-m.jpg"></a>
 <a style="font-size:12px" href="https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/0471142905.hg1802s79#">Bronner et al. (2013) Current Protocols in Human Genetics, DOI: (10.1002/0471142905.hg1802s79)</a>
+
+<aside class="notes">
+  - Lawn has MILLIONS of the synthetici DNA - blades of grass 
+</aside>
 
 # Where does this happen?
 
@@ -205,19 +203,25 @@ On a 'flow cell'
 
 <span class="minicode" style="color:green">[Adapter & Index Primer] </span><span class="minicode" style="color:purple">[Index] </span><span class="minicode" style="color:green">[Target primer] </span><span class="minicode" style="color:black">[Target] </span><span class="minicode" style="color:blue">[Target primer] </span><span class="minicode" style="color:red">[Index] </span><span class="minicode" style="color:blue">[Adapter & Index Primer]</span>
 
-# Sequencing-by-synthesis
+<aside class="notes">
+  Adapter acts as an ANCHOR against the synthetic DNA on the lawn
+  Complementary - binds, and holds DNA on the lawn (everthing unattached gets washed away)
+</aside>
 
-Once bound, florescence of one molecule not enough...
+# Clustering
 
-<img width=480 alt="Cluster Generation via bridge amplification" src="assets/img/Cluster_Generation.png">
+
+<img width=720 alt="Cluster Generation via bridge amplification" src="assets/img/Cluster_Generation.png">
 <a style="font-size:12px">DMLapato, CC BY-SA 4.0, via Wikimedia Commons</a>
 
-- Make lots of copies via bridge amplification a.k.a. clustering!
-- One cluster == many copies of one DNA molecule
 
 <aside class="notes">
 
-- Lawn oligos have both adapter types
+Once bound, florescence of one molecule not enough...
+- Make lots of copies via bridge amplification a.k.a. clustering!
+- One cluster == many copies of one DNA molecule
+- Glass slide is like a lawn with grass
+- Lawn oligos have both adapter types (green and purple!)
 - A SSed molecule binds to one lawn oligo
 - bend molecule over so other end binds to complementary oligo of other end
 - Fill in to double strand, denature to separate two strands, and repeated
@@ -227,18 +231,18 @@ Once bound, florescence of one molecule not enough...
 
 # Sequencing-by-synthesis
 
-<img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png">
-<a style="font-size:12px">Abizar Lakdawalla , CC BY 3.0, via https://openlab.citytech.cuny.edu/</a>
-
 1. Add florescent nucleotides (complementary will bind)
 2. Wash away unbound nucleotides
 3. Fire laser & take photo
 4. Remove fluorophore
-5. Back to **1** ⤴️
+5. Back to **1** ⤴️ [x50, x75 or x125 times, a.k.a. cycles]
+
+<img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png">
+<a style="font-size:12px">Abizar Lakdawalla , CC BY 3.0, via https://openlab.citytech.cuny.edu/</a>
 
 # What does this look like?
 
-<img style="display:block;margin-left:auto;margin-right:auto"  width="750" alt="Cluster Generation" src="assets/img/illumina4.png">
+<img style="display:block;margin-left:auto;margin-right:auto"  width="800" alt="Cluster Generation" src="assets/img/illumina4.png">
 <a style="font-size:12px" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/">EMBL-EBI Training, CC BY-SA 4.0, via https://www.ebi.ac.uk/training/</a>
 
 # Improving quality
@@ -267,18 +271,6 @@ Once bound, florescence of one molecule not enough...
 - Perform bridge amplifcation (bend over), but this time clip off ONLY P7 (orignal end/forward), to leave just reverse
 
 </aside>
-
-# Photos to DNA string
-
-- Special software (e.g. `bcl2fastq`):
- 
-- For each location on the flow cell (cluster):
-  - Record the sequence of bases (from colours)
-  - Calculates a probability the 'base call' is correct 
-    i.e. blurry or weak image?
-  - Note the index in the sequence (sample-specific barcode)
-- Group each recorded sequence or 'reads' with those with the same index 
-  - a.k.a. demultiplexing
   
 # FASTQ File
 
@@ -313,41 +305,31 @@ Quality score
 0.2......................26...31........41          
 ```
 
+<aside class="notes">
+- REMEMBER: MILLIONS OF THESE DNA FRAGMENTS
+  - When converting from the photos to FASTQ file
+  - Gets read ID (machine, flowcell, coordinate, clusterID)
+  - Base quality score
+  - REMEMBER 'N'!
+</aside>
 
-# Things to remember
-
-- Adapters and indices
-  - a.k.a. sequencing 'artefacts' not the real DNA molecule!
-- Base qualities
-  - Cycle-quality decay
-- Paired-end sequencing!
-  - Merge together: better confidence in base call
-  
 # Recap
 
 - DNA molecules essentially: 
   - Made up of nucleotides (`ACTG`)
   - Two strands: complementary base pairs (`C-G`, `A-T`)
-  - aDNA are fragmented molecules: **short**
+  - Modern DNA is **long**, aDNA is: **short**
 - NGS Sequencing: 
   - Massively multiplexed: millions DNA molecules at once
   - Add **adapters** to bind to a glass slide
-  - Make new strand, adding **florescent nucleotides**
+  - Make new strand, adding florescent nucleotides
   - Fire laser at each nucleotide and take photo
+  - Desyncing of clusters result in lower **base-quality** scores over time
+  - Improve by **paired-end sequencing**
 - Results in **FASTQ* file
-  - Has base quality scores
-
-<!-- TODO ADD ALL CREDITS FOR IMAGES UNDER EACH A LA THE ILLUMINA ONE -->
-
-<!-- questions to ask 
 
 
-1. Why do ends go down?
-3. Why are there so many adapter sequences in this ancient DNA library?
-2. What is the sequencing cycle limit of this PE run?
 
-
--->
 
 # Practical: Introduction to NGS data processing {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
@@ -441,7 +423,7 @@ Pipeline (software): a chain of data-processing processes or other software enti
 # Run your first bioinformatic job
 
 ```bash
-nextflow nf-core/eager -profile singularity,test_tsv --input input/fastqs.tsv
+nextflow run nf-core/eager -profile singularity,test_tsv --input input/fastqs.tsv
 ```
 
 # Check the results
@@ -464,3 +446,12 @@ multiqc/
 
 # MultiQC Report
 
+<iframe src='assets/img/multiqc_report_testtsv_eager2_2_0.html' frameborder='0' width="100%" height="500px"></iframe>
+
+<aside class="notes">
+
+
+1. Why do ends go down?
+3. Why are there so many adapter sequences in this ancient DNA library?
+2. What is the sequencing cycle limit of this PE run?
+</aside>

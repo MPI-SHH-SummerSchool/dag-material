@@ -522,6 +522,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
     <h3 class="date" style="color:#d8d8d8;font-size:16;text-align:center;">2021-08-17</h3>
 </section>
 
+<section id="why-study-genetics" class="title-slide slide level1">
+<h1>Why study genetics?</h1>
+<p>DNA gives instructions for functioning, growth, and reproduction of organisms: living <em>and</em> dead</p>
+<p><img width=45% alt="Sources of aDNA" src="assets/img/1-s2.0-S0169534715001597-gr1.jpg"> <a style="font-size:12px" href="https://doi.org/10.1016/j.tree.2015.06.008">Hofman et al. (2015) Trends in Eco. Evo. DOI: 10.1016/j.tree.2015.06.008</a></p>
+<p>Carries much information about the past: ancestry, adaptation to different environments (e.g. diet), disease, etc.</p>
+</section>
+
 <section id="who-am-i" class="title-slide slide level1">
 <h1>Who am I?</h1>
 <ul>
@@ -537,6 +544,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Number of bioinformatics classes taken: 0</li>
 </ul></li>
 </ul>
+<blockquote>
+<p>i.e., YOU CAN LEARN IT TOO! Don’t need to be an expert!</p>
+</blockquote>
 <div>
 <p><img style="vertical-align:middle;margin:0" src="assets/img/E040.svg" width=50> <img style="vertical-align:middle;margin:0" src="assets/img/E045.svg" width=50> <span style=""> <span class="citation" data-cites="jfy133">@jfy133</span></span></p>
 </div>
@@ -549,7 +559,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Describe basics of DNA</li>
 <li>Introduce what DNA sequencing is</li>
 <li>Explain how Illumina <strong>NGS</strong> sequencing <strong>data</strong> is generated</li>
-<li>How to evaluating NGS data [Practical]</li>
+<li>How to preprocess Illumina NGS data [Practical]</li>
+<li>How to evaluate Illumina NGS data [Practical]</li>
 </ol>
 </section>
 
@@ -560,19 +571,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section id="what-is-dna" class="title-slide slide level1">
 <h1>What is DNA?</h1>
-<blockquote>
-<p>Deoxyribonucleic acid (/diːˈɒksɪˌraɪboʊnjuːˌkliːɪk, -ˌkleɪ-/ (DNA) is a molecule composed of two polynucleotide chains that coil around each other to form a double helix carrying genetic instructions for the development, functioning, growth and reproduction of all known organisms and many viruses. - <a href="https://en.wikipedia.org/wiki/DNA">Wikipedia</a></p>
-</blockquote>
-</section>
-
-<section id="what-is-dna-1" class="title-slide slide level1">
-<h1>What is DNA?</h1>
-<p><img width="512" alt="Structure ADN" src="assets/img/604px-DNA_Structure+Key+Labelled.pn_NoBB.png"> <a style="font-size:12px" href="https://en.wikipedia.org/wiki/File:DNA_Structure%2BKey%2BLabelled.pn_NoBB.png">Zephyris, CC BY-SA 3.0 via Wikimedia Commons</a></p>
-</section>
-
-<section id="what-is-dna-2" class="title-slide slide level1">
-<h1>What is DNA?</h1>
-<p><img width="512" alt="Structure ADN" src="assets/img/Structure_ADN.png"> <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png">Pradana Aumars, CC BY-SA 4.0, via Wikimedia Commons</a></p>
+<p><img style="clip-path: inset(0px 100px);object-position:95px 0" alt="Structure ADN" src="assets/img/Structure_ADN.png"> <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Structure_ADN.png">Pradana Aumars, CC BY-SA 4.0, via Wikimedia Commons</a></p>
 </section>
 
 <section id="the-rules" class="title-slide slide level1">
@@ -583,12 +582,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Pyrimidines: <code>C</code>ytosine, <code>T</code>hymine</li>
 <li>Purines: <code>G</code>uanine <code>A</code>denine &amp;</li>
 </ul></li>
-<li>Base pairing: one pyrimidine with one purine
+<li><strong>Base</strong> pairing: one pyrimidine with one purine
 <ul>
 <li><code>C</code> with <code>G</code> (think: CGI)</li>
 <li><code>A</code> with <code>T</code> (think: AT-AT walker)</li>
 </ul></li>
-<li>Complementary
+<li><strong>Complementary</strong>
 <ul>
 <li><code>C</code> on one strand, <code>G</code> on the other (or <em>v.v.</em>)</li>
 <li><code>A</code> on one strand, <code>T</code> on the other (or <em>v.v.</em>)</li>
@@ -600,19 +599,25 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <section id="the-rules-1" class="title-slide slide level1">
 <h1>The rules</h1>
 <ul>
-<li>Make copy of a DNA strand with a <em>polymerase</em>
+<li>Make copy of a DNA strand a.k.a. replication
 <ul>
 <li>Unwind the DNA</li>
 <li>Separate the strands</li>
-<li>Make new strand: find a <code>C</code>, get new <code>G</code> (etc)</li>
+<li>Make new strand: find a <code>C</code>, get new <code>G</code> (etc)
+<ul>
+<li>via a <em>polymerase</em> (adds from ‘free’ nucleotides’)</li>
+</ul></li>
 </ul>
-<img width="150" style="display:block;margin-left:auto;margin-right:auto" alt="DNA replication split" src="assets/img/DNA_replication_split.svg"></a> <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://commons.wikimedia.org/wiki/File:DNA_replication_split.svg">I, Madprime, CC0, via Wikimedia Commons</a></li>
+<img width=75% style="display:block;margin-left:auto;margin-right:auto" alt="DNA replication" src="assets/img/DNA_Polymerase_DNA_Replication.png"></a> <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://commons.wikimedia.org/wiki/File:DNA_Polymerase_DNA_Replication.png">Christinelmiller, CC BY-SA 4.0, via Wikimedia Commons</a></li>
 </ul>
 </section>
 
 <section id="how-do-we-get-dna" class="title-slide slide level1">
 <h1>How do we get DNA?</h1>
 <p><img width="700" alt="Figure 17 01 02" src="assets/img/Figure_17_01_02.jpg"> <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Figure_17_01_02.jpg">CNX OpenStax, CC BY 4.0, via Wikimedia Commons</a></p>
+<aside class="notes">
+Like long squishy spaghetti!
+</aside>
 </section>
 
 <section id="what-about-ancient-dna" class="title-slide slide level1">
@@ -622,10 +627,14 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li>Fragmented (<strong>short</strong> molecules)</li>
 <li>Damaged (modified nucleotides)</li>
+<li>Contamination (soup of modern DNA with aDNA croutons)</li>
 </ul></li>
 </ul>
 <p><a title="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." href="https://www.lucyreading.co.uk/project/ancient-dna/"><img width="365" alt="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." src="assets/img/LucyReading_AncientDNA_MODIFIED.gif"></a></p>
 <p><a style="font-size:12px" href="https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html">© 2015 Lucy Reading / The Scientist. All rights reserved. Modified and used here for training purposes only.</a></p>
+<aside class="notes">
+aDNA different - like overcooking spaghetti - breaks down into smaller pieces and gets damaged Also, <em>contamination</em> from long modern DNA (high quality!)
+</aside>
 </section>
 
 <section id="introduction-to-dna-sequencing" class="title-slide slide level1 center" data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left">
@@ -644,83 +653,45 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p><a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a></p>
 </section>
 
-<section id="historically" class="title-slide slide level1">
-<h1>Historically</h1>
-<p><img width="500" style="margin:0 25% 0 25%" alt="Sanger-sequencing" src="assets/img/Sanger-sequencing.svg"> <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Sanger-sequencing.svg">Estevezj, CC BY-SA 3.0 via Wikimedia Commons</a></p>
-<ul>
-<li>Sanger sequencing
-<ul>
-<li>Separate strands, add primer (starting point)</li>
-<li>Add mix of nucleotides, some with special ‘terminators’</li>
-<li>Pass through size-filtering, read order of terminators</li>
-</ul></li>
-</ul>
-</section>
-
-<section id="pros-and-cons-of-sanger-sequencing" class="title-slide slide level1">
-<h1>Pros and cons of Sanger Sequencing</h1>
-<ul>
-<li>Pros
-<ul>
-<li>Very precise (few errors, still the ‘gold standard’)</li>
-<li>Sequence long DNA molecules</li>
-</ul></li>
-<li>Cons
-<ul>
-<li>Resource heavy, requiring lot of input DNA</li>
-<li>Slow: one. fragment. at. a. time.</li>
-</ul></li>
-</ul>
-</section>
-
 <section id="what-is-ngs" class="title-slide slide level1">
 <h1>What is NGS?</h1>
 <ul>
+<li>Historically: Sanger sequencing
+<ul>
+<li>Slow, expensive, resource hungry</li>
+</ul></li>
 <li>“Next Generation Sequencing”
 <ul>
-<li>Sequence millions and even billions of DNA reads at once!</li>
-<li>via MASSIVE multiplexing!</li>
-<li>Sequence lots of samples at once!</li>
+<li>Sequence billions of DNA reads at once!</li>
 <li>Fast and cheap!</li>
+<li>Market leader: Illumina (others: PacBio, IonTorrent)</li>
 </ul></li>
 </ul>
 <blockquote>
-<p>Not really ‘next’ anymore, consider it more ‘second’ generation (see: Nanopore)</p>
+<p>More ‘second’ generation (see: Nanopore)</p>
 </blockquote>
-</section>
-
-<section id="what-is-ngs-1" class="title-slide slide level1">
-<h1>What is NGS?</h1>
-<div>
-<p><span style="">Market leader:</span> <img style="vertical-align:middle;margin:0" src="https://assets.illumina.com/content/dam/illumina-common/logo/illumina-full_logo-RGB-black.svg" width=200></p>
-</div>
-<p><img width="512" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg"> <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg">Konrad Förstner, CC0, via Wikimedia Commons</a></p>
-<p>(Others: Roche 454, PacBio, IonTorrent etc.)</p>
+<p><img width="250" style="display:block;margin-left:auto;margin-right:auto" alt="Illumina HiSeq 2500" src="assets/img/770px-Illumina_HiSeq_2500.jpg"> <a style="font-size:12px" href="https://commons.wikimedia.org/wiki/File:Illumina_HiSeq_2500.jpg">Konrad Förstner, CC0, via Wikimedia Commons</a></p>
+<aside class="notes">
+<ul>
+<li>Sanger sequencing - one molecule at a time!</li>
+</ul>
+</aside>
 </section>
 
 <section id="how-does-it-work" class="title-slide slide level1">
 <h1>How does it work?</h1>
+<p>Replicate a strand, but add complementary <strong>fluorophore-modified nucleotide</strong>, one colour per base</p>
+<p><img width="256" style="display:block;margin-left:auto;margin-right:auto" alt="Structures of fluorescent nucleotides" src="assets/img/F1.large.jpg"> <a style="font-size:12px" href="http://doi.org/10.1073/pnas.0609513103">Ju et al. (2006) PNAS DOI: 10.1073/pnas.0609513103 </a></p>
+<p>In Illumina: <span style="color:gold"><b>A</b></span> <span style="color:blue"><b>G</b></span> <span style="color:green"><b>T</b></span> <span style="color:red"><b>C</b></span></p>
+<p>Fire mah lazer, and take a picture! Rinse and repeat!</p>
+<aside class="notes">
 <ul>
-<li>Basically same concept, but:
+<li>When flurophore on cannot continue replication: blocks adding next nucleotide
 <ul>
-<li>no size separation</li>
-<li>with pretty pictures!</li>
+<li>BUT can <em>clip off</em> fluorphore!</li>
 </ul></li>
 </ul>
-<p>i.e. to a strand, attach a complementary fluorophore-modified nucleotide, (normally) one colour per base</p>
-<p style="color:red">
-<b>A</b>
-</p>
-<p style="color:blue">
-<b>G</b>
-</p>
-<p style="color:green">
-<b>T</b>
-</p>
-<p style="color:gold">
-<b>C</b>
-</p>
-<p>Fire mah lazer, and take a picture! Rinse and repeat!</p>
+</aside>
 </section>
 
 <section id="how-does-it-work-1" class="title-slide slide level1">
@@ -732,8 +703,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 <section id="where-does-this-happen" class="title-slide slide level1">
 <h1>Where does this happen?</h1>
-<p>On a ‘flow cell’</p>
+<p>On a ‘flow cell’: glass slide with synthetic DNA ‘lawn’</p>
 <p><img style="display:block;margin-left:auto;margin-right:auto" alt="Next generation sequencing slide" src="assets/img/cphg1802-fig-0001-m.jpg"></a> <a style="font-size:12px" href="https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/0471142905.hg1802s79#">Bronner et al. (2013) Current Protocols in Human Genetics, DOI: (10.1002/0471142905.hg1802s79)</a></p>
+<aside class="notes">
+<ul>
+<li>Lawn has MILLIONS of the synthetici DNA - blades of grass</li>
+</ul>
+</aside>
 </section>
 
 <section id="where-does-this-happen-1" class="title-slide slide level1">
@@ -753,42 +729,34 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </style>
 <p><span class="minicode" style="color:green">AATGATACGGCGACCACCAC</span><span class="minicode" style="color:purple">accgacaa</span><span class="minicode" style="color:green">CCCTACACGACGCTCTTCCGATCT</span><span class="minicode" style="color:black">XXXXXX</span><span class="minicode" style="color:blue">AGCACACGTCTGAACTCCAGTCAC</span><span class="minicode" style="color:red">gacacta</span><span class="minicode" style="color:blue">CCGTCTTCTGCTTG</span> <span class="minicode" style="color:green">||||||||||||||||||||</span><span class="minicode" style="color:purple">||||||||</span><span class="minicode" style="color:green">||||||||||||||||||||||||</span><span class="minicode" style="color:black">||||||</span><span class="minicode" style="color:blue">||||||||||||||||||||||||</span><span class="minicode" style="color:red">|||||||</span><span class="minicode" style="color:blue">||||||||||||||</span> <span class="minicode" style="color:green">TTACTATGCCGCTGGTGGTG</span><span class="minicode" style="color:purple">tggctgtt</span><span class="minicode" style="color:green"></span><span class="minicode" style="color:green">GGGATGTGCTGCGAGAAGGCTAGA</span><span class="minicode" style="color:black">XXXXXX</span><span class="minicode" style="color:blue">TCGTGTGCAGACTTGAGGTCAGTG</span><span class="minicode" style="color:red">ctgtgat</span><span class="minicode" style="color:blue">GGCAGAAGACGAAC</span></p>
 <p><span class="minicode" style="color:green">[Adapter &amp; Index Primer] </span><span class="minicode" style="color:purple">[Index] </span><span class="minicode" style="color:green">[Target primer] </span><span class="minicode" style="color:black">[Target] </span><span class="minicode" style="color:blue">[Target primer] </span><span class="minicode" style="color:red">[Index] </span><span class="minicode" style="color:blue">[Adapter &amp; Index Primer]</span></p>
+<aside class="notes">
+Adapter acts as an ANCHOR against the synthetic DNA on the lawn Complementary - binds, and holds DNA on the lawn (everthing unattached gets washed away)
+</aside>
+</section>
+
+<section id="clustering" class="title-slide slide level1">
+<h1>Clustering</h1>
+<p><img width=720 alt="Cluster Generation via bridge amplification" src="assets/img/Cluster_Generation.png"> <a style="font-size:12px">DMLapato, CC BY-SA 4.0, via Wikimedia Commons</a></p>
+<aside class="notes">
+<p>Once bound, florescence of one molecule not enough… - Make lots of copies via bridge amplification a.k.a. clustering! - One cluster == many copies of one DNA molecule - Glass slide is like a lawn with grass - Lawn oligos have both adapter types (green and purple!) - A SSed molecule binds to one lawn oligo - bend molecule over so other end binds to complementary oligo of other end - Fill in to double strand, denature to separate two strands, and repeated - Clip off all P5 (other end) adapters to leave only FORWARD read</p>
+</aside>
 </section>
 
 <section id="sequencing-by-synthesis" class="title-slide slide level1">
 <h1>Sequencing-by-synthesis</h1>
-<p>Once bound, florescence of one molecule not enough…</p>
-<p><img width=480 alt="Cluster Generation via bridge amplification" src="assets/img/Cluster_Generation.png"> <a style="font-size:12px">DMLapato, CC BY-SA 4.0, via Wikimedia Commons</a></p>
-<ul>
-<li>Make lots of copies via bridge amplification a.k.a. clustering!</li>
-<li>One cluster == many copies of one DNA molecule</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Lawn oligos have both adapter types</li>
-<li>A SSed molecule binds to one lawn oligo</li>
-<li>bend molecule over so other end binds to complementary oligo of other end</li>
-<li>Fill in to double strand, denature to separate two strands, and repeated</li>
-<li>Clip off all P5 (other end) adapters to leave only FORWARD read</li>
-</ul>
-</aside>
-</section>
-
-<section id="sequencing-by-synthesis-1" class="title-slide slide level1">
-<h1>Sequencing-by-synthesis</h1>
-<p><img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png"> <a style="font-size:12px">Abizar Lakdawalla , CC BY 3.0, via https://openlab.citytech.cuny.edu/</a></p>
 <ol type="1">
 <li>Add florescent nucleotides (complementary will bind)</li>
 <li>Wash away unbound nucleotides</li>
 <li>Fire laser &amp; take photo</li>
 <li>Remove fluorophore</li>
-<li>Back to <strong>1</strong> ⤴️</li>
+<li>Back to <strong>1</strong> ⤴️ [x50, x75 or x125 times, a.k.a. cycles]</li>
 </ol>
+<p><img width="512" alt="Cluster Generation" style="height:300px;object-fit:cover;object-position:10% 20%" src="assets/img/Sequencing_by_synthesis_Reversible_terminators.png"> <a style="font-size:12px">Abizar Lakdawalla , CC BY 3.0, via https://openlab.citytech.cuny.edu/</a></p>
 </section>
 
 <section id="what-does-this-look-like" class="title-slide slide level1">
 <h1>What does this look like?</h1>
-<p><img style="display:block;margin-left:auto;margin-right:auto"  width="750" alt="Cluster Generation" src="assets/img/illumina4.png"> <a style="font-size:12px" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/">EMBL-EBI Training, CC BY-SA 4.0, via https://www.ebi.ac.uk/training/</a></p>
+<p><img style="display:block;margin-left:auto;margin-right:auto"  width="800" alt="Cluster Generation" src="assets/img/illumina4.png"> <a style="font-size:12px" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/">EMBL-EBI Training, CC BY-SA 4.0, via https://www.ebi.ac.uk/training/</a></p>
 </section>
 
 <section id="improving-quality" class="title-slide slide level1">
@@ -824,23 +792,6 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </aside>
 </section>
 
-<section id="photos-to-dna-string" class="title-slide slide level1">
-<h1>Photos to DNA string</h1>
-<ul>
-<li><p>Special software (e.g. <code>bcl2fastq</code>):</p></li>
-<li><p>For each location on the flow cell (cluster):</p>
-<ul>
-<li>Record the sequence of bases (from colours)</li>
-<li>Calculates a probability the ‘base call’ is correct i.e. blurry or weak image?</li>
-<li>Note the index in the sequence (sample-specific barcode)</li>
-</ul></li>
-<li><p>Group each recorded sequence or ‘reads’ with those with the same index</p>
-<ul>
-<li>a.k.a. demultiplexing</li>
-</ul></li>
-</ul>
-</section>
-
 <section id="fastq-file" class="title-slide slide level1">
 <h1>FASTQ File</h1>
 <blockquote>
@@ -866,24 +817,17 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <p>Quality score</p>
 <pre><code>!&quot;#$%&amp;&#39;()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJ
 0.2......................26...31........41          </code></pre>
-</section>
-
-<section id="things-to-remember" class="title-slide slide level1">
-<h1>Things to remember</h1>
+<aside class="notes">
 <ul>
-<li>Adapters and indices
+<li>REMEMBER: MILLIONS OF THESE DNA FRAGMENTS
 <ul>
-<li>a.k.a. sequencing ‘artefacts’ not the real DNA molecule!</li>
-</ul></li>
-<li>Base qualities
-<ul>
-<li>Cycle-quality decay</li>
-</ul></li>
-<li>Paired-end sequencing!
-<ul>
-<li>Merge together: better confidence in base call</li>
+<li>When converting from the photos to FASTQ file</li>
+<li>Gets read ID (machine, flowcell, coordinate, clusterID)</li>
+<li>Base quality score</li>
+<li>REMEMBER ‘N’!</li>
 </ul></li>
 </ul>
+</aside>
 </section>
 
 <section id="recap" class="title-slide slide level1">
@@ -893,30 +837,19 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <ul>
 <li>Made up of nucleotides (<code>ACTG</code>)</li>
 <li>Two strands: complementary base pairs (<code>C-G</code>, <code>A-T</code>)</li>
-<li>aDNA are fragmented molecules: <strong>short</strong></li>
+<li>Modern DNA is <strong>long</strong>, aDNA is: <strong>short</strong></li>
 </ul></li>
 <li>NGS Sequencing:
 <ul>
 <li>Massively multiplexed: millions DNA molecules at once</li>
 <li>Add <strong>adapters</strong> to bind to a glass slide</li>
-<li>Make new strand, adding <strong>florescent nucleotides</strong></li>
+<li>Make new strand, adding florescent nucleotides</li>
 <li>Fire laser at each nucleotide and take photo</li>
+<li>Desyncing of clusters result in lower <strong>base-quality</strong> scores over time</li>
+<li>Improve by <strong>paired-end sequencing</strong></li>
 </ul></li>
-<li>Results in **FASTQ* file
-<ul>
-<li>Has base quality scores</li>
-</ul></li>
+<li>Results in **FASTQ* file</li>
 </ul>
-<!-- TODO ADD ALL CREDITS FOR IMAGES UNDER EACH A LA THE ILLUMINA ONE -->
-<!-- questions to ask 
-
-
-1. Why do ends go down?
-3. Why are there so many adapter sequences in this ancient DNA library?
-2. What is the sequencing cycle limit of this PE run?
-
-
--->
 </section>
 
 <section id="practical-introduction-to-ngs-data-processing" class="title-slide slide level1 center" data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left">
@@ -991,6 +924,16 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 
 <section id="your-first-bioinformatic-job" class="title-slide slide level1">
 <h1>Your first bioinformatic job</h1>
+<ol type="1">
+<li>Check quality of sequencing/reads</li>
+<li>Remove adapters</li>
+<li>Merge paired-end reads</li>
+<li>Check quality of reads again</li>
+</ol>
+</section>
+
+<section id="your-first-bioinformatic-job-1" class="title-slide slide level1">
+<h1>Your first bioinformatic job</h1>
 <p>We will run the <a href="https://nf-co.re/eager">nf-core/eager</a> pipeline.</p>
 <blockquote>
 <p>nf-core/eager is a scalable and reproducible bioinformatics best-practise processing pipeline for genomic NGS sequencing data, with a focus on ancient DNA (aDNA) data. It is ideal for the (palaeo)genomic analysis of humans, animals, plants, microbes and even microbiomes.</p>
@@ -1001,7 +944,7 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 
 <section id="run-your-first-bioinformatic-job" class="title-slide slide level1">
 <h1>Run your first bioinformatic job</h1>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> nf-core/eager <span class="at">-profile</span> singularity,test_tsv <span class="at">--input</span> input/fastqs.tsv</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run nf-core/eager <span class="at">-profile</span> singularity,test_tsv <span class="at">--input</span> input/fastqs.tsv</span></code></pre></div>
 </section>
 
 <section id="check-the-results" class="title-slide slide level1">
@@ -1019,7 +962,15 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 
 <section id="multiqc-report" class="title-slide slide level1">
 <h1>MultiQC Report</h1>
-
+<iframe src="assets/img/multiqc_report_testtsv_eager2_2_0.html" frameborder="0" width="100%" height="500px">
+</iframe>
+<aside class="notes">
+<ol type="1">
+<li>Why do ends go down?</li>
+<li>Why are there so many adapter sequences in this ancient DNA library?</li>
+<li>What is the sequencing cycle limit of this PE run?</li>
+</ol>
+</aside>
 </section>
     </div>
   </div>
