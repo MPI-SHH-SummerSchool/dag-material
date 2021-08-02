@@ -321,15 +321,12 @@ Quality score
   - Modern DNA is **long**, aDNA is: **short**
 - NGS Sequencing: 
   - Massively multiplexed: millions DNA molecules at once
-  - Add **adapters** to bind to a glass slide
+  - Add **adapters** to bind to a glass slide (lawn)
   - Make new strand, adding florescent nucleotides
   - Fire laser at each nucleotide and take photo
   - Desyncing of clusters result in lower **base-quality** scores over time
   - Improve by **paired-end sequencing**
-- Results in **FASTQ* file
-
-
-
+- Results in *FASTQ* file
 
 # Practical: Introduction to NGS data processing {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
@@ -417,8 +414,10 @@ We will run the [nf-core/eager](https://nf-co.re/eager) pipeline.
 
 Pipeline (software): a chain of data-processing processes or other software entities
 
-<img href="https://raw.githubusercontent.com/nf-core/eager/2.3.5/docs/images/usage/eager2_workflow.png">
+# Your first bioinformatic job
 
+<img width="75%" style="display:block;margin-left:auto;margin-right:auto" src="https://dfzljdn9uc3pi.cloudfront.net/2021/10947/1/fig-1-full.png" href="https://doi.org/10.7717/peerj.10947">
+<a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://doi.org/10.7717/peerj.10947">Fellows Yates et al. (2021) PeerJ. DOI: 10.7717/peerj.10947</a>
 
 # Run your first bioinformatic job
 
@@ -444,14 +443,18 @@ multiqc/
 
 # Practical: Introduction to NGS data quality control {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
+
+
 # MultiQC Report
 
 <iframe src='assets/img/multiqc_report_testtsv_eager2_2_0.html' frameborder='0' width="100%" height="500px"></iframe>
+<a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://www.jafy.eu/files/multiqc_report_testtsv_eager2_2_0.html">Fellows Yates et al. (2021) PeerJ. DOI: 10.7717/peerj.10947</a>
+
 
 <aside class="notes">
 
 
-1. Why do ends go down?
+1. Why do ends go down in base quality?
 3. Why are there so many adapter sequences in this ancient DNA library?
 2. What is the sequencing cycle limit of this PE run?
 </aside>

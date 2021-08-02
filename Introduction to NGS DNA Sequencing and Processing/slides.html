@@ -842,13 +842,13 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <li>NGS Sequencing:
 <ul>
 <li>Massively multiplexed: millions DNA molecules at once</li>
-<li>Add <strong>adapters</strong> to bind to a glass slide</li>
+<li>Add <strong>adapters</strong> to bind to a glass slide (lawn)</li>
 <li>Make new strand, adding florescent nucleotides</li>
 <li>Fire laser at each nucleotide and take photo</li>
 <li>Desyncing of clusters result in lower <strong>base-quality</strong> scores over time</li>
 <li>Improve by <strong>paired-end sequencing</strong></li>
 </ul></li>
-<li>Results in **FASTQ* file</li>
+<li>Results in <em>FASTQ</em> file</li>
 </ul>
 </section>
 
@@ -939,7 +939,11 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <p>nf-core/eager is a scalable and reproducible bioinformatics best-practise processing pipeline for genomic NGS sequencing data, with a focus on ancient DNA (aDNA) data. It is ideal for the (palaeo)genomic analysis of humans, animals, plants, microbes and even microbiomes.</p>
 </blockquote>
 <p>Pipeline (software): a chain of data-processing processes or other software entities</p>
-<p><img href="https://raw.githubusercontent.com/nf-core/eager/2.3.5/docs/images/usage/eager2_workflow.png"></p>
+</section>
+
+<section id="your-first-bioinformatic-job-2" class="title-slide slide level1">
+<h1>Your first bioinformatic job</h1>
+<p><img width="75%" style="display:block;margin-left:auto;margin-right:auto" src="https://dfzljdn9uc3pi.cloudfront.net/2021/10947/1/fig-1-full.png" href="https://doi.org/10.7717/peerj.10947"> <a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://doi.org/10.7717/peerj.10947">Fellows Yates et al. (2021) PeerJ. DOI: 10.7717/peerj.10947</a></p>
 </section>
 
 <section id="run-your-first-bioinformatic-job" class="title-slide slide level1">
@@ -964,9 +968,10 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <h1>MultiQC Report</h1>
 <iframe src="assets/img/multiqc_report_testtsv_eager2_2_0.html" frameborder="0" width="100%" height="500px">
 </iframe>
+<p><a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://www.jafy.eu/files/multiqc_report_testtsv_eager2_2_0.html">Fellows Yates et al. (2021) PeerJ. DOI: 10.7717/peerj.10947</a></p>
 <aside class="notes">
 <ol type="1">
-<li>Why do ends go down?</li>
+<li>Why do ends go down in base quality?</li>
 <li>Why are there so many adapter sequences in this ancient DNA library?</li>
 <li>What is the sequencing cycle limit of this PE run?</li>
 </ol>
