@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# source code downloaded from : https://bitbucket.org/nygcresearch/treemix/downloads/plink2treemix.py and is modified by Mei-Shin Wu 
+
 import sys, os, gzip
 
 if len(sys.argv) < 3:
