@@ -526,7 +526,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <h1>Why study genetics?</h1>
 <p>DNA gives instructions for functioning, growth, and reproduction of organisms: living <em>and</em> dead</p>
 <p><img width=45% alt="Sources of aDNA" src="assets/img/1-s2.0-S0169534715001597-gr1.jpg"> <a style="font-size:12px" href="https://doi.org/10.1016/j.tree.2015.06.008">Hofman et al. (2015) Trends in Eco. Evo. DOI: 10.1016/j.tree.2015.06.008</a></p>
-<p>Carries much information about the past: ancestry, adaptation to different environments (e.g. diet), disease, etc.</p>
+<p>Carries much information about the past: ancestry, adaptation to different environments (e.g. diet, disease, etc.)</p>
 </section>
 
 <section id="who-am-i" class="title-slide slide level1">
@@ -545,10 +545,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul></li>
 </ul>
 <blockquote>
-<p>i.e., YOU CAN LEARN IT TOO! Don’t need to be an expert!</p>
+<p>i.e., YOU CAN LEARN TOO!</p>
 </blockquote>
 <div>
-<p><img style="vertical-align:middle;margin:0" src="assets/img/E040.svg" width=50> <img style="vertical-align:middle;margin:0" src="assets/img/E045.svg" width=50> <span style=""> <span class="citation" data-cites="jfy133">@jfy133</span></span></p>
+<p><span style=""> <span class="citation" data-cites="jfy133">@jfy133</span>:</span> <img style="vertical-align:middle;margin:0" src="assets/img/E040.svg" width=50> <img style="vertical-align:middle;margin:0" src="assets/img/E045.svg" width=50> <span style="">Currently funded by:</span> <img style="vertical-align:middle;margin:0" src="https://www.vfp-archaeologie.uni-muenchen.de/bilder/vor/web_bilder_m/foodtransforms_m.png" width=100> <img style="vertical-align:middle;margin:0" src="https://www.vfp-archaeologie.uni-muenchen.de/bilder/vor/web_bilder_l/logo_erc-flag_eu__l.jpg" width=100></p>
 </div>
 <p><a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a></p>
 </section>
@@ -757,6 +757,9 @@ Adapter acts as an ANCHOR against the synthetic DNA on the lawn Complementary - 
 <section id="what-does-this-look-like" class="title-slide slide level1">
 <h1>What does this look like?</h1>
 <p><img style="display:block;margin-left:auto;margin-right:auto"  width="800" alt="Cluster Generation" src="assets/img/illumina4.png"> <a style="font-size:12px" href="https://www.ebi.ac.uk/training/online/courses/functional-genomics-ii-common-technologies-and-data-analysis-methods/next-generation-sequencing/illumina-sequencing/">EMBL-EBI Training, CC BY-SA 4.0, via https://www.ebi.ac.uk/training/</a></p>
+<blockquote>
+<p>Remember: doing this <em>millions</em> of times at once!</p>
+</blockquote>
 </section>
 
 <section id="improving-quality" class="title-slide slide level1">
@@ -801,7 +804,7 @@ Adapter acts as an ANCHOR against the synthetic DNA on the lawn Complementary - 
 
 <section id="fastq-file-1" class="title-slide slide level1">
 <h1>FASTQ File</h1>
-<p>Example</p>
+<p>Example (files can be gigabytes in size!)</p>
 <pre><code>@K00233:37:HGHLYBBXX:3:1101:2646:1121 1:N:0:NACGCATC+NGCTAATG
 NCGCATGAGCCGCCTGTATCAGGCGCTGATCGAACCGGGCATTGCAGTTGGGATAGATCGGAAGAGCACACGTCTG
 +
@@ -966,14 +969,17 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 
 <section id="multiqc-report" class="title-slide slide level1">
 <h1>MultiQC Report</h1>
-<iframe src="assets/img/multiqc_report_testtsv_eager2_2_0.html" frameborder="0" width="100%" height="500px">
+<iframe src="assets/img/multiqc_report_testtsv_eager2_2_0.html" frameborder="0" width="100%" height="475px">
 </iframe>
 <p><a style="font-size:12px;display:block;margin-left:auto;margin-right:auto" href="https://www.jafy.eu/files/multiqc_report_testtsv_eager2_2_0.html">Fellows Yates et al. (2021) PeerJ. DOI: 10.7717/peerj.10947</a></p>
+<p>Github copy: dag-material/&lt;Intro to NGS&gt;/assets/files/multiqc_report_testtsv_eager2_2_0.html</p>
 <aside class="notes">
 <ol type="1">
-<li>Why do ends go down in base quality?</li>
-<li>Why are there so many adapter sequences in this ancient DNA library?</li>
-<li>What is the sequencing cycle limit of this PE run?</li>
+<li>FQ: Seq Quality Histogram - why going down at end of molecules</li>
+<li>FQ: Adapter Content - why do we have so many adapter in these <strong>aDNA libraries</strong></li>
+<li>AR: Retained Collapsed - why do we expect same number of retained pairs and collapsed pairs?</li>
+<li>AR: Length distribution - why do we see a peak at 120 for SE reads? 5: PFQ: Seq Quality Histogram - why is everything green now?</li>
+<li>PFQ: Adapter content - per base content, where has the N gone?</li>
 </ol>
 </aside>
 </section>
