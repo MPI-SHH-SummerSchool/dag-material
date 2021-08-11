@@ -351,8 +351,17 @@ What is the command line?
 # Logging into a server
 
 1. Open browser
-2. Go to: <LINK>
-3. Log-in with your credentials
+2. Go to your assigned IP address
+3. Log-in with your assigned **city** username and specify a password
+
+> Remember this password - you won't be asked for confirmation & you will re-use in Microbiome Data Analysis!
+
+
+<div>
+  <img style="vertical-align:middle;margin:0" src="assets/img/login.png" width=20%>
+  <img style="vertical-align:middle;margin:0" src="assets/img/file_terminal.png" width=49%>
+</div>
+
 
 # The command line
 
@@ -429,7 +438,7 @@ Pipeline (software): a chain of data-processing processes or other software enti
 # Run your first bioinformatic job
 
 ```bash
-nextflow run nf-core/eager -profile singularity,test_tsv --input input/fastqs.tsv
+nextflow run nf-core/eager -profile singularity,test_tsv --input input/fastqs.tsv --fasta input/Mammoth_MT_Krause.fasta
 ```
 
 # Check the results
