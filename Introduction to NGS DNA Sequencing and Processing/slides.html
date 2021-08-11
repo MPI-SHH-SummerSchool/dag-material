@@ -880,9 +880,15 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <h1>Logging into a server</h1>
 <ol type="1">
 <li>Open browser</li>
-<li>Go to: <LINK></li>
-<li>Log-in with your credentials</li>
+<li>Go to your assigned IP address</li>
+<li>Log-in with your assigned <strong>city</strong> username and specify a password</li>
 </ol>
+<blockquote>
+<p>Remember this password - you won’t be asked for confirmation &amp; you will re-use in Microbiome Data Analysis!</p>
+</blockquote>
+<div>
+<p><img style="vertical-align:middle;margin:0" src="assets/img/login.png" width=20%> <img style="vertical-align:middle;margin:0" src="assets/img/file_terminal.png" width=49%></p>
+</div>
 </section>
 
 <section id="the-command-line" class="title-slide slide level1">
@@ -951,7 +957,7 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 
 <section id="run-your-first-bioinformatic-job" class="title-slide slide level1">
 <h1>Run your first bioinformatic job</h1>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run nf-core/eager <span class="at">-profile</span> singularity,test_tsv <span class="at">--input</span> input/fastqs.tsv</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run nf-core/eager <span class="at">-profile</span> singularity,test_tsv <span class="at">--input</span> input/fastqs.tsv <span class="at">--fasta</span> input/Mammoth_MT_Krause.fasta</span></code></pre></div>
 </section>
 
 <section id="check-the-results" class="title-slide slide level1">
