@@ -1,3 +1,6 @@
+# Raw data directory
+Hands on Introduction to Ancient Microbiome Analysis/tutorial/data/raw/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,7 +1,7 @@
 name: summer_school_microbiome
 channels:
-  - bioconda
   - conda-forge
+  - bioconda
   - defaults
 dependencies:
   - biopython=1.79
