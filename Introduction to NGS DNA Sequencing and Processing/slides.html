@@ -580,7 +580,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Four nucleotides
 <ul>
 <li>Pyrimidines: <code>C</code>ytosine, <code>T</code>hymine</li>
-<li>Purines: <code>G</code>uanine <code>A</code>denine &amp;</li>
+<li>Purines: <code>G</code>uanine, <code>A</code>denine</li>
 </ul></li>
 <li><strong>Base</strong> pairing: one pyrimidine with one purine
 <ul>
@@ -627,7 +627,7 @@ Like long squishy spaghetti!
 <ul>
 <li>Fragmented (<strong>short</strong> molecules)</li>
 <li>Damaged (modified nucleotides)</li>
-<li>Contamination (soup of modern DNA with aDNA croutons)</li>
+<li>Contamination (aDNA in soup of modern DNA)</li>
 </ul></li>
 </ul>
 <p><a title="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." href="https://www.lucyreading.co.uk/project/ancient-dna/"><img width="365" alt="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." src="assets/img/LucyReading_AncientDNA_MODIFIED.gif"></a></p>
@@ -662,7 +662,7 @@ aDNA different - like overcooking spaghetti - breaks down into smaller pieces an
 </ul></li>
 <li>“Next Generation Sequencing”
 <ul>
-<li>Sequence billions of DNA reads at once!</li>
+<li>Sequence billions of DNA molecules at once!</li>
 <li>Fast and cheap!</li>
 <li>Market leader: Illumina (others: PacBio, IonTorrent)</li>
 </ul></li>
@@ -960,12 +960,14 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nextflow</span> run nf-core/eager <span class="at">-profile</span> singularity,test_tsv <span class="at">--input</span> input/fastqs.tsv <span class="at">--fasta</span> input/Mammoth_MT_Krause.fasta</span></code></pre></div>
 </section>
 
-<section id="check-the-results" class="title-slide slide level1">
-<h1>Check the results</h1>
-<p>What is the output?</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> results/</span></code></pre></div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">multiqc/</span></span></code></pre></div>
+<section id="what-are-we-doing---fastqc" class="title-slide slide level1">
+<h1>What are we doing? - FastQC</h1>
+<p><img width="75%" style="display:block;margin-left:auto;margin-right:auto" src="assets/img/fastqc.png"></p>
+</section>
+
+<section id="what-are-we-doing---adapterremoval" class="title-slide slide level1">
+<h1>What are we doing? - AdapterRemoval</h1>
+<p><img width="90%" style="display:block;margin-left:auto;margin-right:auto" src="assets/img/adapter_removal.svg"> <a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a></p>
 </section>
 
 <section id="practical-introduction-to-ngs-data-quality-control" class="title-slide slide level1 center" data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left">
@@ -984,7 +986,8 @@ NATGCATGACAGGAGGTGAGGGCATTTTCCAGATTTTCAGGCTGCGACCTTGAGCATCTTTCGCCGCTTCCAGCAC
 <li>FQ: Seq Quality Histogram - why going down at end of molecules</li>
 <li>FQ: Adapter Content - why do we have so many adapter in these <strong>aDNA libraries</strong></li>
 <li>AR: Retained Collapsed - why do we expect same number of retained pairs and collapsed pairs?</li>
-<li>AR: Length distribution - why do we see a peak at 120 for SE reads? 5: PFQ: Seq Quality Histogram - why is everything green now?</li>
+<li>AR: Length distribution - why do we see a peak at 120 for SE reads?</li>
+<li>PFQ: Seq Quality Histogram - why is everything green now?</li>
 <li>PFQ: Adapter content - per base content, where has the N gone?</li>
 </ol>
 </aside>

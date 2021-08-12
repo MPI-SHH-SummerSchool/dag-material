@@ -68,7 +68,7 @@ Carries much information about the past: ancestry, adaptation to different envir
 
 - Four nucleotides
   - Pyrimidines: `C`ytosine, `T`hymine
-  - Purines: `G`uanine `A`denine & 
+  - Purines: `G`uanine, `A`denine
 - **Base** pairing: one pyrimidine with one purine
   - `C` with `G` (think: CGI)
   - `A` with `T` (think: AT-AT walker)
@@ -105,7 +105,7 @@ Carries much information about the past: ancestry, adaptation to different envir
 - Basically the same, except: aDNA molecules are degraded
   - Fragmented (**short** molecules)
   - Damaged (modified nucleotides)
-  - Contamination (soup of modern DNA with aDNA croutons)
+  - Contamination (aDNA in soup of modern DNA)
   
 <a title="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." href="https://www.lucyreading.co.uk/project/ancient-dna/"><img width="365" alt="Sequencing ancient DNA © 2015 Lucy Reading / The Scientist. All rights reserved. Used here for training purposes only." src="assets/img/LucyReading_AncientDNA_MODIFIED.gif"></a>
 
@@ -138,7 +138,7 @@ to
 - Historically: Sanger sequencing
   - Slow, expensive, resource hungry
 - "Next Generation Sequencing"
-  - Sequence billions of DNA reads at once!
+  - Sequence billions of DNA molecules at once!
   - Fast and cheap!
   - Market leader: Illumina (others: PacBio, IonTorrent)
 
@@ -441,21 +441,16 @@ Pipeline (software): a chain of data-processing processes or other software enti
 nextflow run nf-core/eager -profile singularity,test_tsv --input input/fastqs.tsv --fasta input/Mammoth_MT_Krause.fasta
 ```
 
-# Check the results
+# What are we doing? - FastQC
 
-What is the output?
 
-```bash
-ls
-```
+<img width="75%" style="display:block;margin-left:auto;margin-right:auto" src="assets/img/fastqc.png">
 
-```bash
-cd results/
-```
+# What are we doing? - AdapterRemoval
 
-```bash
-multiqc/
-```
+<img width="90%" style="display:block;margin-left:auto;margin-right:auto" src="assets/img/adapter_removal.svg">
+<a style="font-size:12px" href="openmoji.org">Icons designed by OpenMoji. License: CC BY-SA 4.0</a>
+
 
 # Practical: Introduction to NGS data quality control {data-background="assets/img/IMPRS_SHH_SummerSchool_2021-SectionSlide.jpg" style="color:white;text-align:left" class="center"}
 
@@ -472,8 +467,8 @@ Github copy: dag-material/\<Intro to NGS\>/assets/files/multiqc_report_testtsv_e
 
 1. FQ: Seq Quality Histogram - why going down at end of molecules
 2. FQ: Adapter Content - why do we have so many adapter in these **aDNA libraries**
-3. AR: Retained Collapsed - why do we expect same number of retained pairs and collapsed pairs? 
+3. AR: Retained Collapsed - why do we expect same number of retained pairs and collapsed pairs?
 4. AR: Length distribution - why do we see a peak at 120 for SE reads?
-5: PFQ: Seq Quality Histogram - why is everything green now?
+5. PFQ: Seq Quality Histogram - why is everything green now?
 6. PFQ: Adapter content - per base content, where has the N gone? 
 </aside>
