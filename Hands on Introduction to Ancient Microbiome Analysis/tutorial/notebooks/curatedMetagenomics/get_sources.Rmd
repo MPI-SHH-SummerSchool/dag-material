@@ -24,14 +24,11 @@ selected_samples %>%
   returnSamples("relative_abundance") -> rel_ab
 ```
 
-```{r}
-assay(rel_ab) %>% 
-  as_tibble() -> rel_ab_tibble
-```
 
 ```{r}
-rel_ab_tibble %>% 
-  write_csv("../../data/curated_metagenomics/modern_sources.csv")
+assay(rel_ab) %>% 
+  as.data.frame(.) %>% 
+  write.csv("../../data/curated_metagenomics/modern_sources.csv", row.names=TRUE)
 ```
 
 ```{r}
