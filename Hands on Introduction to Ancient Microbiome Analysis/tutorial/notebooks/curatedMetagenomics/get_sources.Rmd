@@ -28,7 +28,7 @@ selected_samples %>%
 ```{r}
 assay(rel_ab) %>% 
   as.data.frame(.) %>% 
-  write_csv("../../data/curated_metagenomics/modern_sources.csv")
+  write.csv("../../data/curated_metagenomics/modern_sources.csv", row.names=TRUE)
 ```
 
 ```{r}
