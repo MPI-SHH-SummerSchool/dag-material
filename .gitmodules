@@ -1,0 +1,3 @@
+[submodule "Hands on Introduction to Ancient Microbiome Analysis/microbiome_tutorial"]
+	path = Hands on Introduction to Ancient Microbiome Analysis/microbiome_tutorial
+	url = git@github.com:maxibor/microbiome_tutorial.git
