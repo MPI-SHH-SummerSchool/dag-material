@@ -353,6 +353,7 @@ What is the command line?
 1. Open browser
 2. Go to your assigned IP address
 3. Log-in with your assigned **city** username and specify a password
+4. New > Terminal
 
 > Remember this password - you won't be asked for confirmation & you will re-use in Microbiome Data Analysis!
 
