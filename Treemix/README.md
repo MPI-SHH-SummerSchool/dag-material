@@ -1,15 +1,6 @@
-## Welcome to the class on "Treemix"
-### taught by Selina Carlhoff and Mei-Shin Wu.
+## Welcome to the workshop on "Treemix"
+### taught by Selina Carlhoff (selina_carlhoff@eva.mpg.de) and Mei-Shin Wu(wu@shh.mpg.de).
 
-## Download R and RStudio
+We've provided full instructions on how to install all necessary software, prepare your data, run TreeMix and visualisation and interpretation of results [here](https://pad.gwdg.de/kqt5waeaRBuz-JihOAGUHg).
 
-TreeMix comes with plotting functions which are written in R. We recommand users install RStudio as well. 
-
-You can find a quick starting guide to install R and RStudio [here](https://rstudio-education.github.io/hopr/starting.html)
-
-## Code Ocean
-
-Make a [Code Ocean](codeocean.com) account. If you have an "academic" email account (university or research institute), make sure to use it for free monthly computing hours.
-
-
-
+Don't hesitate to contact us if you have any further questions!
