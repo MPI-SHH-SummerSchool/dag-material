@@ -10,4 +10,23 @@ Review summarizing methods commonly employed in genomic studies of ancient patho
 
 **Note:** Readings should be accessible through links provided above. If you have trouble accessing articles, please contact me via email (megan_michel@eva.mpg.de) or on via PM on Mattermost.
 
+### Software and Data Download
+1. **MEGA X (Molecular Genetic Evolutionary Analysis)-** https://www.megasoftware.net/  
+Download the version of MEGA X suitable for your machine and follow instructions to install.
+ 
+2. **Data files-** https://github.com/meganemichel/Phylogeny_Workshop  
+Download this repository to a convenient location on your local machine. If you are comfortable working with Git on the command line follow the following steps:  
+* Open a terminal window on your computer 
+* Change into the directory where you would like to save the Phylogeny_Workshop materials  
+```
+cd /path/to/directory
+```
+* Clone directory
+```
+git clone https://github.com/meganemichel/Phylogeny_Workshop.git
+```
 
+**Note:** If you are not comfortable working with git, navivate to the URL listed above, select the green "Code button", and choose "Download ZIP". Make sure the unzipped directory (containing the subdirectories Alignments, Metadata, etc.) is named `Phylogeny_Workshop`, and move this directory to the desired location in your filesystem. 
+
+## Workshop Activity
+The following github repo contains all the materials for today's activity: https://github.com/meganemichel/Phylogeny_Workshop
