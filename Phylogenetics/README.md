@@ -5,7 +5,15 @@
 Together we will work through some exercises to gain familiarity with phylogenetic methods used in analyses of ancient pathogen single nucleotide polymorphism (SNP) data. We will be analyzing a dataset of genome-wide SNP data from ancient and modern *Yersinia pestis*, the causative agent of the plague. We will start in breakout rooms and come together at the end of the session to discuss our findings.
 
 ## Part 1: Preparation
-The first thing you need to do is ensure that you have downloaded the data files and have the correct software installed on your machine.
+### Readings
+To get a preview of topics discussed in the Phylogenetics Workshop, check out the following readings: 
+1. Spyrou, M. A., Bos, K. I., Herbig, A. & Krause, J. Ancient pathogen genomics as an emerging tool for infectious disease research. Nat. Rev. Genet. 20, 323–340 (2019).- https://rdcu.be/cucFc
+
+Review summarizing methods commonly employed in genomic studies of ancient pathogens. Summarizes methods and case-studies that will be examined in more detail during the workshop.
+
+**Note:** Readings should be accessible through links provided above. If you have trouble accessing articles, please contact me via email (megan_michel@eva.mpg.de) or on via PM on Mattermost.
+
+### Software and Data Downloads
  
 1. **MEGA X (Molecular Genetic Evolutionary Analysis)-** https://www.megasoftware.net/  
 Download the version of MEGA X suitable for your machine and follow instructions to install.
